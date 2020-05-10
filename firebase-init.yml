@@ -1,0 +1,330 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: /bin/zsh 
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/dxiao/code/davidxiao-web
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 135
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 34
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  # fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  fontFamily: "Meslo LG M DZ for Powerline"
+  
+  # The size of the font
+  fontSize: 16 
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 853
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                      \r \r\e]2;dxiao@TSTODXIA010210: ~/code/davidxiao-web\a\e]1;..davidxiao-web\a"
+  - delay: 133
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[35mmac \e[00m9|23:46\e[35m [davidxiao-web] \e[00m\e[K\e[95C\e[35mmaster\e[00m \e[36m ✈\e[30m ✱\e[00m\e[106D\e[?1h\e=\e[?2004h"
+  - delay: 4053
+    content: "e\e[90mxport GOOGLE_APPLICATION_CREDENTIALS='/Users/dxiao/.ssh/davidxiao-web-ae549-firebase-adminsdk-w00fm-0cda83\e[90m9\e[90m8a2.json'\e[39m\e[K\e[A\e[19C"
+  - delay: 296
+    content: "\be\e[39mx"
+  - delay: 195
+    content: "\e[39mp"
+  - delay: 1897
+    content: "\e[39mo\e[39mr\e[39mt\e[39m \e[39mG\e[39mO\e[39mO\e[39mG\e[39mL\e[39mE\e[39m_\e[39mA\e[39mP\e[39mP\e[39mL\e[39mI\e[39mC\e[39mA\e[39mT\e[39mI\e[39mO\e[39mN\e[39m_\e[39mC\e[39mR\e[39mE\e[39mD\e[39mE\e[39mN\e[39mT\e[39mI\e[39mA\e[39mL\e[39mS\e[39m=\e[39m'\e[39m/\e[39mU\e[39ms\e[39me\e[39mr\e[39ms\e[39m/\e[39md\e[39mx\e[39mi\e[39ma\e[39mo\e[39m/\e[39m.\e[39ms\e[39ms\e[39mh\e[39m/\e[39md\e[39ma\e[39mv\e[39mi\e[39md\e[39mx\e[39mi\e[39ma\e[39mo\e[39m-\e[39mw\e[39me\e[39mb\e[39m-\e[39ma\e[39me\e[39m5\e[39m4\e[39m9\e[39m-\e[39mf\e[39mi\e[39mr\e[39me\e[39mb\e[39ma\e[39ms\e[39me\e[39m-\e[39ma\e[39md\e[39mm\e[39mi\e[39mn\e[39ms\e[39md\e[39mk\e[39m-\e[39mw\e[39m0\e[39m0\e[39mf\e[39mm\e[39m-\e[39m0\e[39mc\e[39md\e[39ma\e[39m8\e[39m39\e[39m8\e[39ma\e[39m2\e[39m.\e[39mj\e[39ms\e[39mo\e[39mn\e[39m'"
+  - delay: 3213
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;export GOOGLE_APPLICATION_CREDENTIALS= \a\e]1;export\a\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                      \r \r\e]2;dxiao@TSTODXIA010210: ~/code/davidxiao-web\a\e]1;..davidxiao-web\a"
+  - delay: 133
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[35mmac \e[00m9|23:46\e[35m [davidxiao-web] \e[00m\e[K\e[95C\e[35mmaster\e[00m \e[36m ✈\e[30m ✱\e[00m\e[106D\e[?1h\e=\e[?2004h"
+  - delay: 1042
+    content: "f\e[90mirebase init\e[39m\e[12D"
+  - delay: 194
+    content: "\bf\e[39mi"
+  - delay: 146
+    content: "\e[39mr"
+  - delay: 48
+    content: "\e[39me"
+  - delay: 255
+    content: "\e[39mb"
+  - delay: 135
+    content: "\e[39ma"
+  - delay: 63
+    content: "\e[39ms"
+  - delay: 108
+    content: "\e[39me"
+  - delay: 537
+    content: "\e[39m "
+  - delay: 1060
+    content: "\e[39mp\e[90mr\e[90mo\e[90mj\e[90mects:list\e[39m\e[12D"
+  - delay: 1139
+    content: "\e[39mr\e[39mo\e[39mj\e[39me\e[39mc\e[39mt\e[39ms\e[39m:\e[39ml\e[39mi\e[39ms\e[39mt"
+  - delay: 651
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;firebase projects:list\a\e]1;firebase\a"
+  - delay: 1777
+    content: "\e[?25l\e[36m⠋\e[39m Preparing the list of your Firebase projects"
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠙\e[39m Preparing the list of your Firebase projects"
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠹\e[39m Preparing the list of your Firebase projects"
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠸\e[39m Preparing the list of your Firebase projects"
+  - delay: 69
+    content: "\e[2K\e[1G\e[?25h\e[32m✔\e[39m Preparing the list of your Firebase projects\r\n\e[90m┌──────────────────────┬─────────────────────┬────────────────┬──────────────────────┐\e[39m\r\n\e[90m│\e[39m\e[32m Project Display Name \e[39m\e[90m│\e[39m\e[32m Project ID          \e[39m\e[90m│\e[39m\e[32m Project Number \e[39m\e[90m│\e[39m\e[32m Resource Location ID \e[39m\e[90m│\e[39m\r\n\e[90m├──────────────────────┼─────────────────────┼────────────────┼──────────────────────┤\e[39m\r\n\e[90m│\e[39m davidxiao-web        \e[90m│\e[39m davidxiao-web-ae549 \e[90m│\e[39m 359053893423   \e[90m│\e[39m us-east4             \e[90m│\e[39m\r\n\e[90m└──────────────────────┴─────────────────────┴────────────────┴──────────────────────┘\e[39m\r\n\r\n1 project(s) total.\r\n"
+  - delay: 15
+    content: "\e[?25h"
+  - delay: 11
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                      \r \r\e]2;dxiao@TSTODXIA010210: ~/code/davidxiao-web\a\e]1;..davidxiao-web\a"
+  - delay: 133
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[35mmac \e[00m9|23:47\e[35m [davidxiao-web] \e[00m\e[K\e[95C\e[35mmaster\e[00m \e[36m ✈\e[30m ✱\e[00m\e[106D\e[?1h\e=\e[?2004h"
+  - delay: 11574
+    content: "f\e[90mirebase projects:list\e[39m\e[21D"
+  - delay: 129
+    content: "\bf\e[39mi"
+  - delay: 147
+    content: "\e[39mr"
+  - delay: 80
+    content: "\e[39me"
+  - delay: 869
+    content: "\e[39mb"
+  - delay: 107
+    content: "\e[39ma"
+  - delay: 84
+    content: "\e[39ms"
+  - delay: 128
+    content: "\e[39me"
+  - delay: 398
+    content: "\e[39m "
+  - delay: 508
+    content: "\e[39mi\e[90mn\e[90mi\e[90mt\e[39m\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[12D"
+  - delay: 57
+    content: "\e[39mn"
+  - delay: 232
+    content: "\e[39mi"
+  - delay: 200
+    content: "\e[39mt"
+  - delay: 279
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;firebase init\a\e]1;firebase\a"
+  - delay: 997
+    content: "\e[1m\e[33m\r\n     ######## #### ########  ######## ########     ###     ######  ########\r\n     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##\r\n     ######    ##  ########  ######   ########  #########  ######  ######\r\n     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##\r\n     ##       #### ##     ## ######## ########  ##     ##  ######  ########\r\n\e[39m\e[22m\r\nYou're about to initialize a Firebase project in this directory:\r\n\r\n  \e[1m/Users/dxiao/code/davidxiao-web\e[22m\r\n\r\n"
+  - delay: 7
+    content: "\e[?25l\e[32m?\e[39m \e[1mWhich Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices\r\n.\e[22m\e[0m \e[0m(Press \e[36m\e[1m<space>\e[22m\e[39m to select, \e[36m\e[1m<a>\e[22m\e[39m to toggle all, \e[36m\e[1m<i>\e[22m\e[39m to invert selection)\r\n\e[36m❯◯ Database: Deploy Firebase Realtime Database Rules\e[39m\r\n ◯ Firestore: Deploy rules and create indexes for Firestore\r\n ◯ Functions: Configure and deploy Cloud Functions\r\n ◯ Hosting: Configure and deploy Firebase Hosting sites\r\n ◯ Storage: Deploy Cloud Storage security rules\r\n ◯ Emulators: Set up local emulators for Firebase features\e[58D\e[58C"
+  - delay: 2585
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mWhich Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices\r\n.\e[22m\e[0m \e[0m(Press \e[36m\e[1m<space>\e[22m\e[39m to select, \e[36m\e[1m<a>\e[22m\e[39m to toggle all, \e[36m\e[1m<i>\e[22m\e[39m to invert selection)\r\n ◯ Database: Deploy Firebase Realtime Database Rules\r\n\e[36m❯◯ Firestore: Deploy rules and create indexes for Firestore\e[39m\r\n ◯ Functions: Configure and deploy Cloud Functions\r\n ◯ Hosting: Configure and deploy Firebase Hosting sites\r\n ◯ Storage: Deploy Cloud Storage security rules\r\n ◯ Emulators: Set up local emulators for Firebase features\e[58D\e[58C"
+  - delay: 224
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mWhich Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices\r\n.\e[22m\e[0m \e[0m(Press \e[36m\e[1m<space>\e[22m\e[39m to select, \e[36m\e[1m<a>\e[22m\e[39m to toggle all, \e[36m\e[1m<i>\e[22m\e[39m to invert selection)\r\n ◯ Database: Deploy Firebase Realtime Database Rules\r\n ◯ Firestore: Deploy rules and create indexes for Firestore\r\n\e[36m❯◯ Functions: Configure and deploy Cloud Functions\e[39m\r\n ◯ Hosting: Configure and deploy Firebase Hosting sites\r\n ◯ Storage: Deploy Cloud Storage security rules\r\n ◯ Emulators: Set up local emulators for Firebase features\e[58D\e[58C"
+  - delay: 163
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mWhich Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices\r\n.\e[22m\e[0m \e[0m(Press \e[36m\e[1m<space>\e[22m\e[39m to select, \e[36m\e[1m<a>\e[22m\e[39m to toggle all, \e[36m\e[1m<i>\e[22m\e[39m to invert selection)\r\n ◯ Database: Deploy Firebase Realtime Database Rules\r\n ◯ Firestore: Deploy rules and create indexes for Firestore\r\n ◯ Functions: Configure and deploy Cloud Functions\r\n\e[36m❯◯ Hosting: Configure and deploy Firebase Hosting sites\e[39m\r\n ◯ Storage: Deploy Cloud Storage security rules\r\n ◯ Emulators: Set up local emulators for Firebase features\e[58D\e[58C"
+  - delay: 1245
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mWhich Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices\r\n.\e[22m\e[0m \e[0m\r\n ◯ Database: Deploy Firebase Realtime Database Rules\r\n ◯ Firestore: Deploy rules and create indexes for Firestore\r\n ◯ Functions: Configure and deploy Cloud Functions\r\n\e[36m❯\e[32m◉\e[36m Hosting: Configure and deploy Firebase Hosting sites\e[39m\r\n ◯ Storage: Deploy Cloud Storage security rules\r\n ◯ Emulators: Set up local emulators for Firebase features\e[58D\e[58C"
+  - delay: 1356
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mWhich Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices\r\n.\e[22m\e[0m \e[0m\e[36mHosting: Configure and deploy Firebase Hosting sites\e[39m\e[54D\e[54C\r\n\e[?25h\e[1m\r\n\e[37m=== \e[39mProject Setup\e[22m\r\n\r\nFirst, let's associate this project directory with a Firebase project.\r\nYou can create multiple project aliases by running \e[1mfirebase use --add\e[22m, \r\nbut for now we'll just set up a default project.\r\n\r\n\e[?25l\e[32m?\e[39m \e[1mPlease select an option:\e[22m\e[0m \e[0m\e[2m(Use arrow keys)\e[22m\r\n\e[36m❯ Use an existing project\e[39m \r\n  Create a new project \r\n  Add Firebase to an existing Google Cloud Platform project \r\n  Don't set up a default project \e[33D\e[33C"
+  - delay: 1542
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mPlease select an option:\e[22m\e[0m \e[0m\e[36mUse an existing project\e[39m\e[50D\e[50C\r\n\e[?25h"
+  - delay: 196
+    content: "\e[?25l\e[32m?\e[39m \e[1mSelect a default Firebase project for this directory:\e[22m\e[0m \e[0m\e[2m(Use arrow keys)\e[22m\r\n\e[36m❯ davidxiao-web-ae549 (davidxiao-web)\e[39m \e[38D\e[38C"
+  - delay: 2249
+    content: "\e[2K\e[1A\e[2K\e[G\e[32m?\e[39m \e[1mSelect a default Firebase project for this directory:\e[22m\e[0m \e[0m\e[36mdavidxiao-web-ae549 (davidxiao-web)\e[39m\e[91D\e[91C\r\n\e[?25h\e[1m\e[36mi \e[39m\e[22m Using project davidxiao-web-ae549 (davidxiao-web)\r\n"
+  - delay: 11
+    content: "\e[1m\r\n\e[37m=== \e[39mHosting Setup\e[22m\r\n\r\nYour \e[1mpublic\e[22m directory is the folder (relative to your project directory) that\r\nwill contain Hosting assets to be uploaded with \e[1mfirebase deploy\e[22m. If you\r\nhave a build process for your assets, use your build's output directory.\r\n\r\n\e[32m?\e[39m \e[1mWhat do you want to use as your public directory?\e[22m\e[0m \e[0m\e[2m(public) \e[22m\e[61D\e[61C"
+  - delay: 19944
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mWhat do you want to use as your public directory?\e[22m\e[0m \e[0m\e[36mpublic\e[39m\e[58D\e[58C\r\n\e[32m?\e[39m \e[1mConfigure as a single-page app (rewrite all urls to /index.html)?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22m\e[74D\e[74C"
+  - delay: 14566
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mConfigure as a single-page app (rewrite all urls to /index.html)?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22mY\e[75D\e[75C"
+  - delay: 3877
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mConfigure as a single-page app (rewrite all urls to /index.html)?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22m\e[74D\e[74C"
+  - delay: 356
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mConfigure as a single-page app (rewrite all urls to /index.html)?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22m\e[74D\e[74C"
+  - delay: 629
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mConfigure as a single-page app (rewrite all urls to /index.html)?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22mN\e[75D\e[75C"
+  - delay: 15722
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mConfigure as a single-page app (rewrite all urls to /index.html)?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22m\e[74D\e[74C"
+  - delay: 16659
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mConfigure as a single-page app (rewrite all urls to /index.html)?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22mN\e[75D\e[75C"
+  - delay: 3862
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mConfigure as a single-page app (rewrite all urls to /index.html)?\e[22m\e[0m \e[0m\e[36mNo\e[39m\e[70D\e[70C\r\n\e[32m?\e[39m \e[1mFile \e[4mpublic/404.html\e[24m already exists. Overwrite?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22m\e[56D\e[56C"
+  - delay: 3272
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mFile \e[4mpublic/404.html\e[24m already exists. Overwrite?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22mN\e[57D\e[57C"
+  - delay: 1549
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mFile \e[4mpublic/404.html\e[24m already exists. Overwrite?\e[22m\e[0m \e[0m\e[36mNo\e[39m\e[52D\e[52C\r\n\e[1m\e[36mi \e[39m\e[22m Skipping write of \e[1mpublic/404.html\e[22m\r\n"
+  - delay: 57
+    content: "\e[32m?\e[39m \e[1mFile \e[4mpublic/index.html\e[24m already exists. Overwrite?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22m\e[58D\e[58C"
+  - delay: 3407
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mFile \e[4mpublic/index.html\e[24m already exists. Overwrite?\e[22m\e[0m \e[0m\e[2m(y/N) \e[22mN\e[59D\e[59C"
+  - delay: 483
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mFile \e[4mpublic/index.html\e[24m already exists. Overwrite?\e[22m\e[0m \e[0m\e[36mNo\e[39m\e[54D\e[54C\r\n\e[1m\e[36mi \e[39m\e[22m Skipping write of \e[1mpublic/index.html\e[22m\r\n\r\n\e[1m\e[36mi \e[39m\e[22m Writing configuration info to \e[1mfirebase.json\e[22m...\r\n\e[1m\e[36mi \e[39m\e[22m Writing project information to \e[1m.firebaserc\e[22m...\r\n\r\n\e[1m\e[32m✔ \e[39m\e[22m Firebase initialization complete!\r\n"
+  - delay: 14
+    content: "\e[?25h"
+  - delay: 10
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                      \r \r\e]2;dxiao@TSTODXIA010210: ~/code/davidxiao-web\a\e]1;..davidxiao-web\a"
+  - delay: 150
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[35mmac \e[00m9|23:48\e[35m [davidxiao-web] \e[00m\e[K\e[95C\e[35mmaster\e[00m \e[36m ✈\e[30m ✱\e[00m\e[106D\e[?1h\e=\e[?2004h"
+  - delay: 11000
+    content: "h\bhugo && firebase deploy\e[23D\e[7mh\e[7mu\e[7mg\e[7mo\e[7m \e[7m&\e[7m&\e[7m \e[7mf\e[7mi\e[7mr\e[7me\e[7mb\e[7ma\e[7ms\e[7me\e[7m \e[7md\e[7me\e[7mp\e[7ml\e[7mo\e[7my\e[27m"
+  - delay: 2241
+    content: "\e[23D\e[27mh\e[27mu\e[27mg\e[27mo\e[27m \e[27m&\e[27m&\e[27m \e[27mf\e[27mi\e[27mr\e[27me\e[27mb\e[27ma\e[27ms\e[27me\e[27m \e[27md\e[27me\e[27mp\e[27ml\e[27mo\e[27my "
+  - delay: 3042
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;hugo && firebase deploy\a\e]1;hugo\a"
+  - delay: 56
+    content: "\e[?25lBuilding sites … "
+  - delay: 14
+    content: "\e[0;33mWARN\e[0m 2020/05/09 23:49:07 Page.URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url\r\n"
+  - delay: 210
+    content: "\e[?25h\r\e[K\r\n                   | EN   \r\n-------------------+------\r\n  Pages            |  10  \r\n  Paginator pages  |   0  \r\n  Non-page files   |   0  \r\n  Static files     | 473  \r\n  Processed images |   0  \r\n  Aliases          |   1  \r\n  Sitemaps         |   1  \r\n  Cleaned          |   0  \r\n\r\nTotal in 240 ms\r\n"
+  - delay: 2236
+    content: "\r\n\e[1m\e[37m===\e[39m Deploying to 'davidxiao-web-ae549'...\e[22m\r\n\r\n\e[1m\e[36mi \e[39m\e[22m deploying \e[1mhosting\e[22m\r\n"
+  - delay: 1304
+    content: "\e[1m\e[36mi  hosting[davidxiao-web-ae549]:\e[39m\e[22m beginning deploy...\r\n"
+  - delay: 14
+    content: "\e[1m\e[36mi  hosting[davidxiao-web-ae549]:\e[39m\e[22m found 18 files in \e[1mpublic\e[22m\r\n"
+  - delay: 204
+    content: "\e[2K\e[9999D\e[1m\e[36m⠋  hosting: \e[39m\e[22madding files to version [0/18] (\e[1m\e[32m0%\e[39m\e[22m)"
+  - delay: 206
+    content: "\e[2K\e[9999D\e[1m\e[36m⠙  hosting: \e[39m\e[22madding files to version [0/18] (\e[1m\e[32m0%\e[39m\e[22m)"
+  - delay: 199
+    content: "\e[2K\e[9999D\e[1m\e[36m⠹  hosting: \e[39m\e[22muploading new files [0/18] (\e[1m\e[32m0%\e[39m\e[22m)"
+  - delay: 203
+    content: "\e[2K\e[9999D\e[1m\e[36m⠸  hosting: \e[39m\e[22muploading new files [0/18] (\e[1m\e[32m0%\e[39m\e[22m)"
+  - delay: 203
+    content: "\e[2K\e[9999D\e[1m\e[36m⠼  hosting: \e[39m\e[22muploading new files [0/18] (\e[1m\e[32m0%\e[39m\e[22m)"
+  - delay: 203
+    content: "\e[2K\e[9999D\e[1m\e[36m⠴  hosting: \e[39m\e[22muploading new files [0/18] (\e[1m\e[32m0%\e[39m\e[22m)"
+  - delay: 202
+    content: "\e[2K\e[9999D\e[1m\e[36m⠦  hosting: \e[39m\e[22muploading new files [14/18] (\e[1m\e[32m77%\e[39m\e[22m)"
+  - delay: 203
+    content: "\e[2K\e[9999D\e[1m\e[36m⠧  hosting: \e[39m\e[22muploading new files [17/18] (\e[1m\e[32m94%\e[39m\e[22m)"
+  - delay: 203
+    content: "\e[2K\e[9999D\e[1m\e[36m⠇  hosting: \e[39m\e[22muploading new files [17/18] (\e[1m\e[32m94%\e[39m\e[22m)"
+  - delay: 203
+    content: "\e[2K\e[9999D\e[1m\e[36m⠏  hosting: \e[39m\e[22muploading new files [17/18] (\e[1m\e[32m94%\e[39m\e[22m)"
+  - delay: 205
+    content: "\e[2K\e[9999D\e[1m\e[36m⠋  hosting: \e[39m\e[22muploading new files [17/18] (\e[1m\e[32m94%\e[39m\e[22m)"
+  - delay: 204
+    content: "\e[2K\e[9999D\e[1m\e[36m⠙  hosting: \e[39m\e[22muploading new files [17/18] (\e[1m\e[32m94%\e[39m\e[22m)\e[2K\e[9999D\e[1m\e[32m✔  hosting[davidxiao-web-ae549]:\e[39m\e[22m file upload complete\r\n\e[1m\e[36mi  hosting[davidxiao-web-ae549]:\e[39m\e[22m finalizing version...\r\n"
+  - delay: 511
+    content: "\e[1m\e[32m✔  hosting[davidxiao-web-ae549]:\e[39m\e[22m version finalized\r\n\e[1m\e[36mi  hosting[davidxiao-web-ae549]:\e[39m\e[22m releasing new version...\r\n"
+  - delay: 308
+    content: "\e[1m\e[32m✔  hosting[davidxiao-web-ae549]:\e[39m\e[22m release complete\r\n\r\n\e[1m\e[32m✔ \e[39m\e[22m \e[1m\e[4mDeploy complete!\e[24m\e[22m\r\n\r\n\e[1mProject Console:\e[22m https://console.firebase.google.com/project/davidxiao-web-ae549/overview\r\n\e[1mHosting URL:\e[22m https://davidxiao-web-ae549.web.app\r\n"
+  - delay: 29
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                      \r \r\e]2;dxiao@TSTODXIA010210: ~/code/davidxiao-web\a\e]1;..davidxiao-web\a"
+  - delay: 147
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[35mmac \e[00m9|23:49\e[35m [davidxiao-web] \e[00m\e[K\e[95C\e[35mmaster\e[00m \e[36m ✈\e[30m ✱\e[00m\e[106D\e[?1h\e=\e[?2004h"
+  - delay: 15802
+    content: "c\e[90mlear\e[39m\b\b\b\b"
+  - delay: 163
+    content: "\bc\e[39mu\e[90mr\e[90ml\e[90m \e[90m-s https://api.ipify.org|grep --color=never -oE '^([0-9]{1,3}\\.){3}[0-9]{1,3}$'\e[39m\e[82D"
+  - delay: 183
+    content: "\e[39mr"
+  - delay: 111
+    content: "\e[39ml"
+  - delay: 100
+    content: "\e[39m "
+  - delay: 203
+    content: "\b\b\b\b\bh    \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[83D\bhttps://davidxiao-web-ae549.web.app\e[35Dcurl \e[7mh\e[7mt\e[7mt\e[7mp\e[7ms\e[7m:\e[7m/\e[7m/\e[7md\e[7ma\e[7mv\e[7mi\e[7md\e[7mx\e[7mi\e[7ma\e[7mo\e[7m-\e[7mw\e[7me\e[7mb\e[7m-\e[7ma\e[7me\e[7m5\e[7m4\e[7m9\e[7m.\e[7mw\e[7me\e[7mb.app\e[27m"
+  - delay: 614
+    content: "\e[35D\e[27mh\e[27mt\e[27mt\e[27mp\e[27ms\e[27m:\e[27m/\e[27m/\e[27md\e[27ma\e[27mv\e[27mi\e[27md\e[27mx\e[27mi\e[27ma\e[27mo\e[27m-\e[27mw\e[27me\e[27mb\e[27m-\e[27ma\e[27me\e[27m5\e[27m4\e[27m9\e[27m.\e[27mw\e[27me\e[27mb\e[27m.\e[27ma\e[27mp\e[27mp\e[90m-s https://api.ipify.org|grep --color=never -oE '^([0-9]{1,3}\\.){3}\e[90m[\e[90m0-9]{1,3}$'\e[39m\e[K\e[A\e[56C\e[K\e[55C\e[35mmaster\e[00m \e[36m ✈\e[30m ✱\e[00m\e[1B\r\e[K\e[A\e[68C\e[?1l\e>\e[?2004l\e[1B\r\e]2;curl https://davidxiao-web-ae549.web.app\a\e]1;curl\a"
+  - delay: 358
+    content: "<!DOCTYPE html>\r\n<html lang=\"en-us\">\r\n  <head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\r\n    \r\n    <title>My New Hugo Site </title>\r\n    <meta name=\"viewport\" content=\"width=device-width,minimum-scale=1\">\r\n    <meta name=\"generator\" content=\"Hugo 0.70.0\" />\r\n    \r\n    \r\n      <META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\">\r\n    \r\n\r\n    \r\n    \r\n      <link href=\"/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css\" rel=\"stylesheet\">\r\n    \r\n\r\n    \r\n\r\n    \r\n      \r\n    \r\n\r\n    \r\n    \r\n      <link href=\"/index.xml\" rel=\"alternate\" type=\"application/rss+xml\" title=\"My New Hugo Site\" />\r\n      <link href=\"/index.xml\" rel=\"feed\" type=\"application/rss+xml\" title=\"My New Hugo Site\" />\r\n      \r\n    \r\n    \r\n    <meta property=\"og:title\" content=\"My New Hugo Site\" />\r\n<meta property=\"og:description\" content=\"\" />\r\n<meta property=\"og:type\" content=\"website\" />\r\n<meta property=\"og:url\" content=\"https://davidxiao.me/\" />\r\n<meta property=\"og:updated_time\" content=\"2020-04-16T10:44:57-04:00\" />\r\n<meta itemprop=\"name\" content=\"My New Hugo Site\">\r\n"
+  - delay: 5
+    content: "<meta itemprop=\"description\" content=\"\"><meta name=\"twitter:card\" content=\"summary\"/>\r\n<meta name=\"twitter:title\" content=\"My New Hugo Site\"/>\r\n<meta name=\"twitter:description\" content=\"\"/>\r\n\r\n  </head>\r\n\r\n  <body class=\"ma0 avenir bg-near-white\">\r\n\r\n    \r\n\r\n  <header>\r\n    <div class=\"pb3-m pb6-l bg-black\">\r\n      <nav class=\"pv3 ph3 ph4-ns\" role=\"navigation\">\r\n  <div class=\"flex-l justify-between items-center center\">\r\n    <a href=\"https://davidxiao.me/\" class=\"f3 fw2 hover-white no-underline white-90 dib\">\r\n      My New Hugo Site\r\n    </a>\r\n    <div class=\"flex-l items-center\">\r\n      \r\n\r\n      \r\n      \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    </div>\r\n  </div>\r\n</nav>\r\n\r\n      <div class=\"tc-l pv3 ph3 ph4-ns\">\r\n        <h1 class=\"f2 f-subheadline-l fw2 light-silver mb0 lh-title\">\r\n          My New Hugo Site\r\n        </h1>\r\n        \r\n      </div>\r\n    </div>\r\n  </header>\r\n\r\n\r\n    <main class=\"pb7\" role=\"main\">\r\n      \r\n  <article class=\"cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray\">\r\n    \r\n  </article>\r\n  \r\n  \r\n  \r\n  \r\n  \r\n  \r\n  \r\n    \r\n    \r\n\r\n    <div class=\"pa3 pa4-ns w-100 w-70-ns center\">\r\n      \r\n       \r\n          <h1 class=\"flex-none\">\r\n            Recent Posts\r\n          </h1>\r\n        \r\n\r\n      \r\n\r\n      <section class=\"w-100 mw8\">\r\n        \r\n        \r\n          <div class=\"relative w-100 mb4\">\r\n            \r\n<article class=\"bb b--black-10\">\r\n  <div class=\"db pv4 ph3 ph0-l no-underline dark-gray\">\r\n    <div class=\"flex flex-column flex-row-ns\">\r\n      \r\n      <div class=\"blah w-100\">\r\n        <h1 class=\"f3 fw1 athelas mt0 lh-title\">\r\n          <a href=\"https://davidxiao.me/posts/my-first-post/\" class=\"color-inherit dim link\">\r\n            My First Post\r\n            </a>\r\n        </h1>\r\n        <div class=\"f6 f5-l lh-copy nested-copy-line-height nested-links\">\r\n          helloworld\r\n        </div>\r\n          <a href=\"https://davidxiao.me/posts/my-first-post/\" class=\"ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1\">read more</a>\r\n        \r\n      </div>\r\n    </div>\r\n  </div>\r\n</article>\r\n\r\n          </div>\r\n        \r\n      </section>\r\n\r\n      \r\n\r\n      </div>\r\n  \r\n\r\n    </main>\r\n    <footer class=\"bg-black bottom-0 w-100 pa3\" role=\"contentinfo\">\r\n  <div class=\"flex justify-between\">\r\n  <a class=\"f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3\" href=\"https://davidxiao.me/\" >\r\n    &copy;  My New Hugo Site 2020 \r\n  </a>\r\n    <div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div>\r\n  </div>\r\n</footer>\r\n\r\n    \r\n\r\n  <script src=\"/dist/js/app.3fc0f988d21662902933.js\"></script>\r\n\r\n\r\n  </body>\r\n</html>\r\n"
+  - delay: 6
+    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                      \r \r\e]2;dxiao@TSTODXIA010210: ~/code/davidxiao-web\a\e]1;..davidxiao-web\a"
+  - delay: 131
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[35mmac \e[00m9|23:49\e[35m [davidxiao-web] \e[00m\e[K\e[95C\e[35mmaster\e[00m \e[36m ✈\e[30m ✱\e[00m\e[106D\e[?1h\e=\e[?2004h"
+  - delay: 3901
+    content: "\e[?2004l\r\r\n\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                      \r \r\e]2;dxiao@TSTODXIA010210: ~/code/davidxiao-web\a\e]1;..davidxiao-web\a"
+  - delay: 132
+    content: "\r\e[0m\e[27m\e[24m\e[J\e[35mmac \e[00m9|23:49\e[35m [davidxiao-web] \e[00m\e[K\e[95C\e[35mmaster\e[00m \e[36m ✈\e[30m ✱\e[00m\e[106D\e[?1h\e=\e[?2004h"
+  - delay: 1696
+    content: "\e[?2004l\r\r\n"
