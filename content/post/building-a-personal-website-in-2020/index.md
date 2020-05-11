@@ -1,6 +1,9 @@
 ---
 title: "Building a personal website in 2020"
-date: 2020-04-16T10:44:57-04:00
+date: 2020-04-16
+hero: ./images/hero-2.jpg
+authors:
+  - David Xiao
 draft: false
 ---
 

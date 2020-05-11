@@ -2,14 +2,5 @@ baseURL: "https://davidxiao.me/"
 languageCode: "en-us"
 title: "DAVID'S PLACE"
 theme: "novela"
-pygmentsstyle: 'monokai'
-paginate: 6
-social:
-  twitter: "#"
-  github: "#"
-  instagram: "#"
-  linkedin: "#"
-  dribbble: "#"
-  youtube: "#"
 taxonomies:
   author: authors
