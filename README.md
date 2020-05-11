@@ -13,11 +13,13 @@ Before deploying to Firebase, we need to have a running website on local.
 
 - (optional) Set the correct github username and email for commits in the future.
   
-        git config --global user.name "David Xiao"; git config --global user.email "3964699+davxiao@users.noreply.github.com";
+        git config --global user.name "David Xiao";
+        git config --global user.email "3964699+davxiao@users.noreply.github.com";
 
 - Update submodules and do some cleanup.
 
-        cd davidxiao-web; git submodule update --init --recursive;
+        cd davidxiao-web;
+        git submodule update --init --recursive;
 
 - Test it by run `hugo server -D` on the project root directory, then visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser.
 
@@ -44,7 +46,7 @@ As long as the homepage is coming up, local test environment is up and running.
 
 The following libs are required only when using terminalizer-player. Those versions are tested in May 2020.
 
-    $ npm install --save xterm@3.14.5  jquery@3.5.1 terminalizer-player@0.4.1
+    $ npm install --save xterm@3.14.5 jquery@3.5.1 terminalizer-player@0.4.1
 
 ## TODO
 
