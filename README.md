@@ -46,7 +46,7 @@ As long as the homepage is coming up, local test environment is up and running.
 
 The following libs are required only when using terminalizer-player. Those versions are tested in May 2020.
 
-    $ npm install --save xterm@3.14.5 jquery@3.5.1 terminalizer-player@0.4.1;
+    npm install --save xterm@3.14.5 jquery@3.5.1 terminalizer-player@0.4.1;
 
 ## TODO
 
