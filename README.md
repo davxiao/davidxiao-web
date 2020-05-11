@@ -21,7 +21,7 @@ Before deploying to Firebase, we need to have a running website on local.
         cd davidxiao-web;
         git submodule update --init --recursive;
 
-- Test it by run `hugo server -D` on the project root directory, then visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser.
+- Test it by run `hugo server -D;` on the project root directory, then visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser.
 
 As long as the homepage is coming up, local test environment is up and running.
 
@@ -29,24 +29,24 @@ As long as the homepage is coming up, local test environment is up and running.
 
 1. Install Firebase CLI and (optional) Google Cloud SDK CLI on your local environment.
 
-   - Firebase CLI. The official recommended way is to use npm. When you have npm installed, just run `npm i -g firebase-tools`.
-   - Google Cloud SDK CLI. If you are using macOS and have [homebrew](https://brew.sh/) installed, then just run `brew cask install google-cloud-sdk` and you are all set.
+   - Firebase CLI. The official recommended way is to use npm. When you have npm installed, just run `npm i -g firebase-tools;`.
+   - Google Cloud SDK CLI. If you are using macOS and have [homebrew](https://brew.sh/) installed, then just run `brew cask install google-cloud-sdk;` and you are all set.
 
 2. Set up a Firebase account and create a new firebase project. It should be pretty straightforward. Just be noted that after the project is created, you need to specify GCP resource location. The location can not be changed afterwards, so choose wisely.
 
 3. Configure firebase authentication using either a service account (recommended) or a user credential.
 
-4. (optional) Run `firebase projects:list` to make sure the tool is authorized to access the project you've created for hosting.
+4. (optional) Run `firebase projects:list;` to make sure the tool is authorized to access the project you've created for hosting.
 
-5. Run `firebase init` in the project root directory to initilize the project.
+5. Run `firebase init;` in the project root directory to initilize the project.
 
-6. Run `hugo && firebase deploy` to push the website to firebase.
+6. Run `hugo && firebase deploy;` to push the website to firebase.
 
 ## External Dependencies
 
 The following libs are required only when using terminalizer-player. Those versions are tested in May 2020.
 
-    $ npm install --save xterm@3.14.5 jquery@3.5.1 terminalizer-player@0.4.1
+    $ npm install --save xterm@3.14.5 jquery@3.5.1 terminalizer-player@0.4.1;
 
 ## TODO
 
