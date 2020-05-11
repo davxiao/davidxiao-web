@@ -1,7 +1,23 @@
 ---
-title: "Building a website from the ground up in 2020"
+title: "Building a personal website from the ground up in 2020"
 date: 2020-04-16T10:44:57-04:00
 draft: false
 ---
 
-Back in the 90s when I first came across websites and the ABCs of HTML, people who can understand or write just any HTML code would be considered highly technical and kind of cool. Fast forward to around 2000 when .com was booming, front end developers need to 
+This is my first post on my own website. So I decided to write about how I built this website from the ground up. Hopefully you'll find it interesting to read.
+
+---
+
+But first, allow me to jibber-jabber a bit on it...
+
+Back in the 90s when I first came across internet and web, whoever knows just anything about how to create a website would be considered highly technical and kind of cool.
+
+Fast forward to 2000 when [Dot-com bubble](https://en.wikipedia.org/wiki/Dot-com_bubble) was at its best, for any decent web developer, he or she would need to know not just how to write basic html tags but but also how to use .css and web creation tools such as dreamweaver.
+
+Fast forward again to 2010s, server side script languages such as PHP and Ruby on Rails are pretty hot. Perhaps it is just my perception but I remember clearly how most web developers are either front-end developers or back-end developers, despite many claimed they are "full-stack" web engineers.
+
+Now that it's 2020, social media and smart phone is anywhere and everywhere, it makes [content creation](https://en.wikipedia.org/wiki/Content_creation) possible for just anyone who wants to publish something on the internet.
+
+The big question is: " WHERE ? "
+
+---

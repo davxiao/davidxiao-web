@@ -29,8 +29,9 @@ As long as the homepage is coming up, local test environment is up and running.
 
 1. Install Firebase CLI and (optional) Google Cloud SDK CLI on your local environment.
 
-   - Firebase CLI. The official recommended way is to use npm. When you have npm installed, just run `npm i -g firebase-tools;`.
-   - Google Cloud SDK CLI. If you are using macOS and have [homebrew](https://brew.sh/) installed, then just run `brew cask install google-cloud-sdk;` and you are all set.
+   - Firebase CLI. The recommended way is to run `npm i -g firebase-tools;` See its [github repo](https://github.com/firebase/firebase-tools) for detail
+
+   - Google Cloud SDK CLI. If you are using macOS and have [homebrew](https://brew.sh/) installed, then just run `brew cask install google-cloud-sdk;` All set.
 
 2. Set up a Firebase account and create a new firebase project. It should be pretty straightforward. Just be noted that after the project is created, you need to specify GCP resource location. The location can not be changed afterwards, so choose wisely.
 
