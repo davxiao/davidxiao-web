@@ -27,8 +27,6 @@ projects: []
 
 This is my first blog post, and I decided to write about how I built this website from the ground up. I wish you'll find it helpful.
 
-{{< xterm-player >}}
-
 # Is this for you or not
 
 Web development has come a long way. Back in the late 90's when I first came across Internet, anyone who knows anything about [HTML](https://en.wikipedia.org/wiki/HTML) would be considered very technical.
@@ -72,6 +70,3 @@ On macOS, I recommend using a package manager such as [`Homebrew`](https://brew.
     $ brew install hugo
 
 and you are all set. In case you need to check which Hugo version is installed, run `brew version`. On my mac it is `Hugo Static Site Generator v0.70.0/extended darwin/amd64`. For installing Hugo on Windows or Linux, refer to Hugo's documentation.
-
-
-

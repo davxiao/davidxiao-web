@@ -160,7 +160,7 @@ abstract_length = 135
 
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_js  = ["jquery"]
+plugins_js  = []
 
 # Avatars.
 # An avatar is an image that appears next to a user's name.
@@ -170,7 +170,7 @@ plugins_js  = ["jquery"]
   gravatar = false
 
   # Choose a shape for avatar images. Options: circle, square.
-  shape = "circle"
+  shape = "square"
 
 # Available address formats.
 [address_formats]
