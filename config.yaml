@@ -1,6 +1,0 @@
-baseURL: "https://davidxiao.me/"
-languageCode: "en-us"
-title: "DAVID'S PLACE"
-theme: "novela"
-taxonomies:
-  author: authors

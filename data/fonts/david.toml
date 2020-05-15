@@ -1,0 +1,14 @@
+# Font style metadata
+name = "david"
+
+# Optional Google font URL
+google_fonts = "Merriweatheri:300,300i|Merriweather+Sans:300,300i|Roboto+Mono"
+
+# Font families
+heading_font = "Merriweather"
+body_font = "Merriweather Sans"
+nav_font = "Merriweather Sans"
+mono_font = "Roboto Mono"
+
+# Font size
+
