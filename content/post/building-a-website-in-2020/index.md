@@ -35,13 +35,13 @@ In this post I will talk about how I built this website from the ground up using
 
 {{< my-dropcap Web >}} development has come a long way. Back in the late 90's when I first came across Internet, anyone who knows anything about [HTML](https://en.wikipedia.org/wiki/HTML) would be considered very technical.
 
-Fast forward into 2020, social media and smart phone is ubiquitous, [web hosting services](https://en.wikipedia.org/wiki/Web_hosting_service) such as [Wix](https://www.wix.com/) and [Wordpress](https://wordpress.com/) have made [content creation](https://en.wikipedia.org/wiki/Content_creation) possible for anyone who wishes to create a website without headache.
+Fast forward into 2020, social media and smart phone is ubiquitous, [web hosting services](https://en.wikipedia.org/wiki/Web_hosting_service) such as [Wix](https://www.wix.com/) and [Wordpress](https://wordpress.com/) have made [content creation](https://en.wikipedia.org/wiki/Content_creation) possible for anyone who wishes to create a website without much headache.
 
 Why should you building a website from the ground up as opposed to using a web hosting service?
 
 ## Maybe it's for you
 
-Using a static site generator to build and deploy a website is not for everyone. George Cushen who is Hugo theme Academic's main contributor once put:
+Building a website with a static site generator is not for everyone. George Cushen who is Hugo theme Academic's main contributor once put:
 
 > *...(it would) require a basic understanding of using the command line in the Terminal (Mac/Linux) or Command Prompt (Windows) app on your computer. If you are not interested in this, perhaps this is not for you...*
 >
@@ -56,20 +56,21 @@ First and foremost, let's take a look on what will be covered in the post.
 1. Register a domain name.
   
 2. Set up Hugo as static site generator.
-3. Use a kick-starter theme to get you going quickly.
-4. Deploy the new site to Firebase.
+3. Use a kick-starter theme to get going quickly.
+4. Deploy the site to Firebase.
+5. Add your domain to the new site.
 
 ## 1. Register a domain name
 
-It's pretty straightforward. Come up with a domain name for your site, such as `davidxiao.me`. You want to be creative <3. The name is better to be concise and easy to remember. 
+It's pretty straightforward. You come up with a great domain name. It is better to be concise and easy to remember. Be creative <3.
 
-Complete the domain registration on any [Domain Name Registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) you prefer. I use [Google Domains](https://domains.google/) but there are other good choices such as [Namecheap](https://namecheap.com/) and [Go Daddy](https://godaddy.com/).
+Then complete the domain registration on any [Domain Name Registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) you prefer. I use [Google Domains](https://domains.google/) but there are other good choices such as [Namecheap](https://namecheap.com/) and [Go Daddy](https://godaddy.com/).
 
 {{< figure src="googledomain.png" title="Register a domain name on Google Domains" >}}
 
 ## 2. Setting up Hugo
 
-[Hugo](https://gohugo.io/) is a [static site generator](https://en.wikipedia.org/wiki/Web_template_system#Static_site_generators). There are many other site generators, I picked Hugo for a few reasons: 
+[Hugo](https://gohugo.io/) is a [static site generator](https://en.wikipedia.org/wiki/Web_template_system#Static_site_generators). There are many other site generators, I picked Hugo for a few reasons:
 
 - It's [open source](https://en.wikipedia.org/wiki/Open_source) and backed by an active developer team and support community.
 - It's a monolithic program with no external dependencies.
@@ -136,8 +137,16 @@ Next, go to [Firebase](https://firebase.google.com/) to set up an account and cr
 
 Authenticating with a service account allows you to use Firebase CLI to manage your Firebase project. Google has provided a step by step guide [here](https://firebase.google.com/docs/app-distribution/authenticate-service-account.md).
 
-1. (optional) Run `firebase projects:list;` to make sure the tool is authorized to access the project you've created for hosting.
+When authentication is set up, go to your project root directory and follow the recorded screens below to initialize firebase and deploy the very first version of your site onto firebase.
 
-2. Run `firebase init;` in the project root directory to initilize the project.
+{{< asciinema-player id="asciicast-331048" src="https://asciinema.org/a/331048.js" >}}
 
-3. Run `hugo && firebase deploy;` to push the website to firebase.
+Congratulations! Your website is online! You should find your Hosting URL at the end of the Firebase deploy output, it's typically something like: `https://your-project-id.web.app`
+
+## 5. Add your domain to the new site
+
+Go to **Hosting** on Firebase, click on "Add custom domain". Typically you wanted to add your root domain name and a sub domain name such as "www". For example, I added "davidxiao.me" for my website and added another entry for redirecting `www.davidxiao.me` to `davidxiao.me`
+
+When it's complete, you will be able to visit your website by your custom domain regsitered on step 1.
+
+{{< figure src="customdomain.png" title="Add custom domain to your website" >}}
