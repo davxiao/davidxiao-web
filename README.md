@@ -43,11 +43,11 @@ As long as the homepage is coming up, local test environment is up and running.
 
 6. Run `hugo && firebase deploy;` to push the website to firebase.
 
-## External Dependencies
+~~## External Dependencies~~
 
-The following libs are required only when using terminalizer-player. Those versions are tested in May 2020.
+~~The following libs are required only when using terminalizer-player. Those versions are tested in May 2020.~~
 
-    npm install --save xterm@3.14.5 jquery@3.5.1 terminalizer-player@0.4.1;
+~~    npm install --save xterm@3.14.5 jquery@3.5.1 terminalizer-player@0.4.1;~~
 
 ## TODO
 

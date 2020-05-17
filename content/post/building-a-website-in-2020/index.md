@@ -3,8 +3,12 @@ title: 'Building a website in 2020'
 subtitle: 'with Hugo and Google Firebase'
 summary: Create a static website with Hugo from the ground up  
 date: 2020-04-16
+lastMod: 
 authors:
   - david-xiao
+categories: []
+tags: []
+featured: false
 draft: false
 
 # Featured image (optional)
@@ -13,7 +17,7 @@ draft: false
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
   placement: 3
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/icErAzyU3fY)'
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/ukzHlkoz1IE)'
   focal_point: "Smart"
   preview_only: false
 
@@ -25,48 +29,115 @@ image:
 projects: []
 ---
 
-This is my first blog post, and I decided to write about how I built this website from the ground up. I wish you'll find it helpful.
+In this post I will talk about how I built this website from the ground up using Hugo as site generator and Firebase as hosting provider. I wish you'll find it helpful.
 
-# Is this for you or not
+---
 
-Web development has come a long way. Back in the late 90's when I first came across Internet, anyone who knows anything about [HTML](https://en.wikipedia.org/wiki/HTML) would be considered very technical.
+{{< my-dropcap Web >}} development has come a long way. Back in the late 90's when I first came across Internet, anyone who knows anything about [HTML](https://en.wikipedia.org/wiki/HTML) would be considered very technical.
 
-In 2020, social media and smart phone is anywhere and everywhere, [web hosting services](https://en.wikipedia.org/wiki/Web_hosting_service) such as [Wix](https://www.wix.com/) and [Wordpress](https://wordpress.com/) have made [content creation](https://en.wikipedia.org/wiki/Content_creation) possible and accessible for anyone who wishes to create a website without heavylifting.
+Fast forward into 2020, social media and smart phone is ubiquitous, [web hosting services](https://en.wikipedia.org/wiki/Web_hosting_service) such as [Wix](https://www.wix.com/) and [Wordpress](https://wordpress.com/) have made [content creation](https://en.wikipedia.org/wiki/Content_creation) possible for anyone who wishes to create a website without headache.
 
-Then you may wonder, why would anyone care about building a website from the ground up?
+Why should you building a website from the ground up as opposed to using a web hosting service?
 
-Well, it is not for everyone.
+## Maybe it's for you
 
-But if you are like me who likes to go beyond content creation, who likes to give in your time and take a deep dive to learn more about building a website that is lightweight and secure, cost effective (totally free except the domain name annual fees) yet no [vendor lock-in](https://en.wikipedia.org/wiki/Vendor_lock-in), perhaps this post is for you.
+Using a static site generator to build and deploy a website is not for everyone. George Cushen who is Hugo theme Academic's main contributor once put:
 
-# Let's dive right in
+> *...(it would) require a basic understanding of using the command line in the Terminal (Mac/Linux) or Command Prompt (Windows) app on your computer. If you are not interested in this, perhaps this is not for you...*
+>
+> [Original post](https://georgecushen.com/create-your-website-with-hugo/)
 
-First and foremost, let's take a look on what I wanted to cover in this post.
+But if going beyond content creation and learning more about building a website that is lightweight and secure, cost effective yet no [vendor lock-in](https://en.wikipedia.org/wiki/Vendor_lock-in) is your thing, then let's dive right in.
 
-- Register a domain name.
+## Overview
+
+First and foremost, let's take a look on what will be covered in the post.
+
+1. Register a domain name.
   
-- Set up [Hugo](https://gohugo.io/) as static site generator. I picked Hugo for it's a relatively mature project supported by an active community.
-- Use a kick-starter theme to get you going. There are many themes available on Hugo, In this post I will use Academic. It also comes with a [kick-start](https://github.com/sourcethemes/academic-kickstart/) on github.
-- A hosting provider. There are many options there, [Google Firebase](https://http://firebase.google.com/), [Netlify](https://www.netlify.com/) and [AWS Amplify](http://aws.amazon.com/amplify/) to name a few. Each one has its own offering. I picked Firebase only because they seem to offer a bit more on their free tier.
+2. Set up Hugo as static site generator.
+3. Use a kick-starter theme to get you going quickly.
+4. Deploy the new site to Firebase.
 
-## Register a domain name
+## 1. Register a domain name
 
 It's pretty straightforward. Come up with a domain name for your site, such as `davidxiao.me`. You want to be creative <3. The name is better to be concise and easy to remember. 
 
-Complete the domain registration on any [Domain Name Registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) you prefer. I use [Google Domains](https://domains.google/) but there are other good choices such as [Go Daddy](https://godaddy.com/).
+Complete the domain registration on any [Domain Name Registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) you prefer. I use [Google Domains](https://domains.google/) but there are other good choices such as [Namecheap](https://namecheap.com/) and [Go Daddy](https://godaddy.com/).
 
 {{< figure src="googledomain.png" title="Register a domain name on Google Domains" >}}
 
-## Setting up Hugo
+## 2. Setting up Hugo
 
-Hugo is a static site generator. In a nutshell, Hugo renders your content into HTML files and helps deploying those HTML files to your choice of hosting provider.
+[Hugo](https://gohugo.io/) is a [static site generator](https://en.wikipedia.org/wiki/Web_template_system#Static_site_generators). There are many other site generators, I picked Hugo for a few reasons: 
 
-A few words about content. It is what you write as content creator. Hugo takes content written in [Markdown](https://en.wikipedia.org/wiki/Markdown) (`.md`), a format that is designed for content creation and intended to be used by technical and non-technical writers alike. Since inception, Markdown has become the 'de facto' format in blogging. There are many good guides on Markdown syntax, e.g. [Markdown Guide](https://www.markdownguide.org/). I won't go further into Markdown detail in this post.
+- It's [open source](https://en.wikipedia.org/wiki/Open_source) and backed by an active developer team and support community.
+- It's a monolithic program with no external dependencies.
+- It's production ready.
 
-### Hugo installation
+In a nutshell, Hugo renders content into HTML files and uploads the files onto your choice of hosting provider. Your content is what you write as content creator. Hugo takes content files written in [Markdown](https://en.wikipedia.org/wiki/Markdown) (`.md`), a format that is intended to be used by technical and non-technical writers alike. Since inception, Markdown has become the *de facto* format in content creation and blogging.
 
-On macOS, I recommend using a package manager such as [`Homebrew`](https://brew.sh/) to manage third-party packages. With Homebrew installed, run:
+If you need to learn about Markdown syntax, there are good guides such as [Markdown Guide](https://www.markdownguide.org/).
 
-    $ brew install hugo
+### Installing Hugo
 
-and you are all set. In case you need to check which Hugo version is installed, run `brew version`. On my mac it is `Hugo Static Site Generator v0.70.0/extended darwin/amd64`. For installing Hugo on Windows or Linux, refer to Hugo's documentation.
+On macOS, I recommend using a package manager such as [Homebrew](https://brew.sh/) to manage third-party packages. With Homebrew installed, to install Hugo, just run:
+
+    $ brew install hugo ;
+
+All set. In case you need to check which Hugo version is installed, run `hugo version`. On my mac it returns `Hugo Static Site Generator v0.70.0/extended darwin/amd64`
+
+For installing Hugo on Windows or Linux, refer to Hugo's documentation.
+
+## 3. Use a kick-starter theme
+
+Hugo has built-in theme mechanism that allows developers to quickly run a theme and see the results. It also provides all the necessary building blocks for user to personalize the theme. There are many themes available on Hugo, for my own website I use Academic Theme. It also comes with a [academic-kickstart repo](https://github.com/sourcethemes/academic-kickstart/) on github for teasers.
+
+The easy way to get started is to just fork the repo, download the code and run it.
+
+{{< figure src="forkrepo.png" title="Fork the kickstart into your own repo" >}}
+
+Download the code:
+
+    $ git clone <replace-it-with-your-own-repo-url> ;
+    $ cd <your-repo-root-dir> ;
+    $ git submodule update --init --recursive ; # get the latest Academic theme
+
+Run Hugo to serve the test site:
+
+    $ hugo server -D ;
+
+Now visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser and you should see the homepage.
+
+Congrats! You've got your first Hugo website up and running on your local environment!
+
+{{% alert note %}}
+Hugo only binds to local network address for [security by default](https://en.wikipedia.org/wiki/Secure_by_default). If you need to test the site on another computer in your local network, run:
+
+    $ hugo server -D --bind=0.0.0.0 ;
+
+{{% /alert %}}
+
+## 4. Deploy the new site to Firebase
+
+There are many out there: [Google Firebase](https://http://firebase.google.com/), [GitHub Pages](https://pages.github.com/), [Netlify](https://www.netlify.com/) and [AWS Amplify](http://aws.amazon.com/amplify/) to name a few. Each one has its own offering. I picked Firebase as my hosting provider because they seem to offer a bit more on their free tier.
+
+First, install Firebase CLI and (optional) Google Cloud SDK CLI.
+
+- Firebase CLI. The recommended way is to run `npm i -g firebase-tools ;` See its [github repo](https://github.com/firebase/firebase-tools) for more detail. If you don't have `npm` installed yet, run: `brew install node ;`. npm will be installed alongside node.js.
+
+- Google Cloud SDK CLI. Run `brew cask install google-cloud-sdk ;`
+
+Next, go to [Firebase](https://firebase.google.com/) to set up an account and create a new Firebase project. Make sure it uses the default free tier plan which is called `Spark`. Be noted you need to specify GCP resource location under **Project Overview** in Firebase Dashboard after project is created. The location can not be changed afterwards, so choose something close to you would be wise.
+
+{{< figure src="gcplocation.png" title="Specify resource location under Project Overview in Firebase Dashboard" >}}
+
+### Set up service account authenication on Firebase
+
+Authenticating with a service account allows you to use Firebase CLI to manage your Firebase project. Google has provided a step by step guide [here](https://firebase.google.com/docs/app-distribution/authenticate-service-account.md).
+
+1. (optional) Run `firebase projects:list;` to make sure the tool is authorized to access the project you've created for hosting.
+
+2. Run `firebase init;` in the project root directory to initilize the project.
+
+3. Run `hugo && firebase deploy;` to push the website to firebase.

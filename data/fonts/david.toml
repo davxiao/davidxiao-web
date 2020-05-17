@@ -2,7 +2,7 @@
 name = "david"
 
 # Optional Google font URL
-google_fonts = "Merriweatheri:300,300i|Merriweather+Sans:300,300i|Roboto+Mono"
+google_fonts = "Merriweather:400,400i,300,300i|Merriweather+Sans:400,400i,300,300i|Roboto+Mono"
 
 # Font families
 heading_font = "Merriweather"

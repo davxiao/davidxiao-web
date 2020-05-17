@@ -6,10 +6,10 @@ authors:
 - admin
 tags:
 - Academic
-- 开源
+- OpenSource
 categories:
-- Demo
-- 教程
+- Cat1
+- Cat2
 date: "2016-04-20T00:00:00Z"
 lastmod: "2019-04-17T00:00:00Z"
 featured: false
@@ -21,7 +21,7 @@ draft: false
 # Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 image:
   placement: 2
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/ukzHlkoz1IE)'
   focal_point: ""
   preview_only: false
 

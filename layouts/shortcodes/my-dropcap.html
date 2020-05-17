@@ -1,0 +1,4 @@
+{{- $src := .Get 0 -}}
+{{- $firstletter := substr $src 0 1 -}}
+{{- $therest := substr $src 1 -}}
+<span class="my-dropcap">{{$firstletter}}</span>{{$therest}}

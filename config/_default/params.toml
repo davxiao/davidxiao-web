@@ -162,6 +162,12 @@ abstract_length = 135
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
 plugins_js  = []
 
+# Custom CSS code needs to be under assets/scss/ folder after v4.6
+# The following plugins_css is no longer valid 
+# See https://sourcethemes.com/academic/docs/customization/#customize-style-css
+# plugins_css  = []
+
+
 # Avatars.
 # An avatar is an image that appears next to a user's name.
 # An avatar can be uploaded as an image named `avatar` to each user's profile or fetched from Gravatar.com.
