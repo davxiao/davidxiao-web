@@ -46,11 +46,16 @@ footer {
 }
 
 .dark div.article-container a:hover {
-  color: #ff2400;
+  color: #e02000;
   border-bottom: none;
 }
- 
+
 .dark div.media.author-card.content-widget-hr a:hover {
+  color: #eeeeee;
+  border-bottom: none;
+}
+
+.dark div.article-tags a:hover {
   color: #eeeeee;
   border-bottom: none;
 }
@@ -68,7 +73,7 @@ footer {
 .dark div.article-container a {
   color: #eeeeee;
   text-decoration: none;
-  border-bottom: 1px solid #ff2400;
+  border-bottom: 1px solid #d72000;
   transition: color 0.3s ease;
 }
 
@@ -81,6 +86,10 @@ footer {
 }
 
 .dark div.media.author-card.content-widget-hr a {
+  border-bottom: none;
+}
+
+.dark div.article-tags a {
   border-bottom: none;
 }
 
@@ -101,3 +110,7 @@ footer {
    line-height: 2rem;
 }
 
+div.article-container h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}

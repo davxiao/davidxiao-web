@@ -1,13 +1,19 @@
 ---
 title: 'Building a website in 2020'
 subtitle: 'with Hugo and Google Firebase'
-summary: Create a static website with Hugo from the ground up  
+summary: If you are interested in building a personal blog site in a cost efficent way, this post discusses about creating a website from the ground up with minimal vendor dependency and high levels of autonomy using Hugo and Firebase.
 date: 2020-04-16
 lastMod: 
 authors:
   - david-xiao
-categories: []
-tags: []
+profile: false
+categories:
+  - IT
+tags:
+  - Hugo
+  - Firebase
+  - Markdown
+  - Website
 featured: false
 draft: false
 
@@ -150,3 +156,5 @@ Go to **Hosting** on Firebase, click on "Add custom domain". Typically you wante
 When it's complete, you will be able to visit your website by your custom domain regsitered on step 1.
 
 {{< figure src="customdomain.png" title="Add custom domain to your website" >}}
+
+{{< comments-remark42 >}}

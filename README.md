@@ -51,4 +51,4 @@ As long as the homepage is coming up, local test environment is up and running.
 
 ## TODO
 
-To be added later
+To be added later.
