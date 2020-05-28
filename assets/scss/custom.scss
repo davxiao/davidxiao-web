@@ -2,7 +2,7 @@
 Order is important! The latter ones can override the former ones
 *****/
 
-.tag-cloud a {
+div.tag-cloud a {
   margin: 0px 30px 0px 0px;
   line-height: 1;
 }
@@ -113,4 +113,116 @@ footer {
 div.article-container h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+.article-style figure img {
+  border-radius: 5px;
+}
+
+.featured-image {
+  border-radius: 5px;
+}
+
+div.ml-3 a img {
+  border-radius: 5px;
+}
+
+.article-header-caption {
+  border-radius: 5px 0 5px 0;
+}
+
+.article-header-caption a:hover {
+  color: #eeeeee !important;
+  border-bottom: none;
+}
+
+.article-header-caption a {
+  border-bottom: none !important;
+}
+
+/* Gist Embed - Dark Theme Styling */
+/* https://gist.github.com/Reelix/c92051efb62171e868daf57aaa1f9f88 */ 
+/* Modified by davidxiao.me */ 
+/* Body */
+
+.dark .gist-data tbody {
+  background-color: #44475a;
+}
+
+/* Line Number Column */
+.dark .gist-data tbody td:nth-of-type(1) {
+  color: #2B91AF !important;
+}
+
+.gist-data tbody td:nth-of-type(1) {
+  border-top: none;
+}
+
+/* Code Column */
+.dark .gist-data tbody td:nth-of-type(2) {
+  color: #eeeeee !important;
+}
+
+/* Even row */
+.dark .gist-data tbody tr:nth-of-type(even) {
+  background-color: #323440 !important;
+}
+
+/* Comments */
+.dark .pl-c {
+  color: #57A64A !important;
+}
+
+/* Function */
+.dark .pl-k, tbody tr:first-child .blob-code, tbody tr:last-child .blob-code {
+  color: #569CD6 !important;
+}
+
+/* Function Name */
+.dark .pl-en {
+  color: #eeeeee !important;
+}
+
+/* Function Method */
+.dark .pl-c1 {
+  color: #eeeeee !important;
+}
+/* "'s around Strings */
+.dark .pl-pds {
+  color: #D69D85 !important;
+}
+
+/* Strings */
+.dark .pl-s {
+  color: #D69D85 !important;
+}
+
+.dark .pl-smi {
+  color: #eeeeee !important;
+}
+
+.dark .gist .gist-meta {
+  color: #eeeeee;
+  background: #44475a;
+}
+
+.dark .gist .gist-meta a:hover {
+  color: #eeeeee;
+  border-bottom: none;
+}
+
+.dark .gist .gist-meta a {
+  border-bottom: none;
+}
+
+.gist .gist-file {
+  border-radius: 5px  !important;
+}
+  
+.gist .gist-data {
+  border-radius: 5px 5px 0px 0px !important;
+}
+  
+.gist .gist-meta {
+  border-radius: 0px 0px 5px 5px !important;
 }

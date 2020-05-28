@@ -17,8 +17,8 @@ subtitle = ""
 
 [design]
   # Minimum and maximum font sizes (1.0 = 100%).
-  font_size_min = 1.4
-  font_size_max = 1.4
+  font_size_min = 1.25
+  font_size_max = 1.25
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.

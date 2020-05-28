@@ -8,7 +8,7 @@ authors:
   - david-xiao
 profile: false
 categories:
-  - IT
+  - Site-Building
 tags:
   - Hugo
   - Firebase

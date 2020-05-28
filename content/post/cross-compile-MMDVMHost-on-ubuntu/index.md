@@ -4,10 +4,11 @@
 title: "Cross Compile MMDVMHost on Ubuntu"
 subtitle: "Using raspberry-pi toolchain and then some"
 summary: "A quick \"How-to\" guide on cross compiling raspberry-pi programs on Ubuntu 20.04 using pi toolchain. This post takes Pi Zero W (BCM2708) as an example but the approach would be applicable to other Pi systems."
+profile: false
 authors:
   - david-xiao
 categories:
-  - IT
+  - Raspberry-Pi
 tags:
   - raspberrypi
   - cross-compile
@@ -18,7 +19,7 @@ date: 2020-05-25
 lastmod: 2020-05-25
 featured: false
 draft: false
-profile: false
+
 
 
 # Featured image
