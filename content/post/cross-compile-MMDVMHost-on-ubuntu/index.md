@@ -3,7 +3,7 @@
 
 title: "Cross Compile MMDVMHost on Ubuntu"
 subtitle: "Using raspberry-pi toolchain and then some"
-summary: "A quick \"How-to\" guide on cross compiling raspberry-pi programs on Ubuntu 20.04 using pi toolchain. This post takes Pi Zero W (BCM2708) as an example but the approach would be applicable to other Pi systems."
+summary: "A quick \"How-to\" guide to compiling raspberry-pi programs on Ubuntu 20.04 using pi toolchain. This post takes Pi Zero W (BCM2708 chip) as an example but the approach would be applicable to other Pi systems."
 profile: false
 authors:
   - david-xiao
@@ -38,7 +38,7 @@ image:
 projects: []
 ---
 
-A little teaser: Raspberry Pi is not really ediable :-)
+A little teaser here: Raspberry Pi is not really ediable :-)
 
 So I have a [Raspberry Pi Zero W](https://www.raspberrypi.org/blog/raspberry-pi-zero-w-joins-family/) for about one year now.
 

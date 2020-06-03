@@ -30,11 +30,11 @@ body {
 }
 
 body.dark {
-  color: #eeeeee;
+  color: #dadada;
 }
 
-.navbar {
-  background: #eeeeee;
+.dark .navbar {
+  background: #dadada;
 }
 
 footer {
@@ -42,7 +42,11 @@ footer {
 }
 
 .dark blockquote {
-  color: #eeeeee;
+  color: #dadada;
+}
+
+.dark div.media-body a {
+  color: #dadada;
 }
 
 .dark div.article-container a:hover {
@@ -51,27 +55,27 @@ footer {
 }
 
 .dark div.media.author-card.content-widget-hr a:hover {
-  color: #eeeeee;
+  color: #dadada;
   border-bottom: none;
 }
 
 .dark div.article-tags a:hover {
-  color: #eeeeee;
+  color: #dadada;
   border-bottom: none;
 }
 
 .dark ul.share a:hover {
-  color: #eeeeee;
+  color: #dadada;
   border-bottom: none;
 }
 
 .dark div.article-container.pt-3 a:hover {
-  color: #eeeeee;
+  color: #dadada;
   border-bottom: none;
 }
 
 .dark div.article-container a {
-  color: #eeeeee;
+  color: #dadada;
   text-decoration: none;
   border-bottom: 1px solid #d72000;
   transition: color 0.3s ease;
@@ -110,9 +114,17 @@ footer {
    line-height: 2rem;
 }
 
+div.article-container.pt-3 h1 {
+  font-size: 1.9rem !important;
+}
+
 div.article-container h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+div.article-container h3 {
+  font-size: 1rem;
 }
 
 .article-style figure img {
@@ -132,7 +144,7 @@ div.ml-3 a img {
 }
 
 .article-header-caption a:hover {
-  color: #eeeeee !important;
+  color: #dadada !important;
   border-bottom: none;
 }
 
@@ -160,7 +172,7 @@ div.ml-3 a img {
 
 /* Code Column */
 .dark .gist-data tbody td:nth-of-type(2) {
-  color: #eeeeee !important;
+  color: #dadada !important;
 }
 
 /* Even row */
@@ -198,16 +210,16 @@ div.ml-3 a img {
 }
 
 .dark .pl-smi {
-  color: #eeeeee !important;
+  color: #dadada !important;
 }
 
 .dark .gist .gist-meta {
-  color: #eeeeee;
+  color: #dadada;
   background: #44475a;
 }
 
 .dark .gist .gist-meta a:hover {
-  color: #eeeeee;
+  color: #dadada;
   border-bottom: none;
 }
 

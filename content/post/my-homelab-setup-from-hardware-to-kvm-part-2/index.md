@@ -3,12 +3,15 @@
 
 title: "My Homelab Setup From Hardware to KVM - Part 2"
 subtitle: "KVM Setup"
-summary: ""
-authors: []
+summary: "Install and configure Proxmox as KVM hypervisor."
+profile: false
+authors:
+ - david-xiao
+categories:
+ - Homelab
 tags: []
-categories: []
-date: 2020-05-25T23:08:43-04:00
-lastmod: 2020-05-25T23:08:43-04:00
+date: 2020-05-29
+lastmod: 2020-05-29
 featured: false
 draft: false
 
@@ -19,6 +22,7 @@ image:
   caption: ""
   focal_point: ""
   preview_only: false
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/7SDoly3FV_0)'
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -27,3 +31,8 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+***[TL;DR](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)***
+
+*Install and configure Proxmox as KVM hypervisor.*
+
+{{< figure src="playsan13.png" title="Playing [三國志XIII](https://store.steampowered.com/app/363150/ROMANCE_OF_THE_THREE_KINGDOMS_XIII/) on Win10 guest through Remote Desktop" >}}
