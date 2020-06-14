@@ -1,14 +1,25 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Adding Your Own Commenting System to a Static Site"
-subtitle: ""
-summary: ""
-authors: []
-tags: []
-categories: []
-date: 2020-04-01
-lastmod: 2020-04-01
+title: "Integrating a Self-Hosting Commenting System to Your Site"
+subtitle: "using Remark42, Hugo, Docker and Cloudflare"
+summary: "If you are looking for integrating a commenting system on your site but also like to have control over its infrastructure and data, this is how I did it."
+profile: false
+authors:
+  - david-xiao
+tags:
+  - self-hosting
+  - hugo
+  - hugo-academic
+  - remark42
+  - cloudflare
+  - docker
+categories:
+  - Homelab
+  - Site-Building
+  - Cloud
+date: 2020-06-09
+lastmod: 2020-06-09
 featured: false
 draft: false
 
@@ -19,6 +30,7 @@ image:
   caption: ""
   focal_point: ""
   preview_only: false
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/uq5RMAZdZG4)'
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -27,3 +39,119 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
+*TLDR 👉 It talks about hosting remark42 commenting system as Docker container; Leveraging Cloudflare to protect the remark42 endpoint; Integrating remark42 to a Hugo static site which is built on Hugo and using academic theme.*
+
+Before getting started, have a look at any post on my blog at [davidxiao.me](https://davidxiao.me/) and see the way commenting works. If you like what you saw, please read on.
+
+## What Will be Covered in This Post
+
+- Deploy remark42 container on Docker
+
+- Protect your remark42 endpoint with Cloudflare CDN
+- Integrate remark42 to your Hugo site
+
+## Step 1. Hosting Remark42
+
+[Remark42](https://remark42.com/) is an open source commenting system that can be deployed as container. It's self-contained with little external dependencies. You can find deployement guide on its Remark42's git repo.
+
+Feel free to do container your way but if you are interested in what tool I use for docker management, it's [Portainer](https://github.com/portainer/portainer).
+
+I have the following parameters on my remark42 container:
+
+```
+REMARK_URL              make sure it has the full path if you are using reverse proxy and rewrites, e.g. https://api.davidxiao.me/remark42
+SITE	                site id. For example: davidxiao
+SECRET	                required. can be a long and hard-to-guess string
+DEBUG	                true
+AUTH_GOOGLE_CID         your own value
+AUTH_GOOGLE_CSEC        same
+AUTH_FACEBOOK_CID       same
+AUTH_FACEBOOK_CSEC      same
+AUTH_TWITTER_CID        same
+AUTH_TWITTER_CSEC       same
+AUTH_GITHUB_CID         same
+AUTH_GITHUB_CSEC        same
+ADMIN_SHARED_EMAIL      mail address that will receive notifications such as new comments
+NOTIFY_EMAIL_ADMIN	true
+NOTIFY_TYPE	        email
+NOTIFY_EMAIL_FROM	mail address that is in the same domain see Mailgun settings. For example, mine is remark42@davidxiao.me
+AUTH_EMAIL_FROM	        same as above
+ADMIN_SHARED_ID	        OAuth authenticated user id that has admin access. see https://github.com/umputun/remark42#admin-users
+SMTP_HOST	        smtp.mailgun.org
+SMTP_PORT	        465
+SMTP_TLS	        true
+SMTP_USERNAME	        SMTP credential from Mailgun
+SMTP_PASSWORD	        
+```
+NOTES: for more detail on Remark42 email configuration, check this [page](https://github.com/umputun/remark42/blob/master/docs/email.md)
+
+### App Registration on the OAuth Providers
+
+Before you can complete app registration on the [OAuth providers](https://en.wikipedia.org/wiki/List_of_OAuth_providers) supported by Remark42 (Google, facebook, twitter, github), you would need to determine the domain name of your Remark42 api endpoint.
+
+{{< figure src="facebook.jpg" title="My app registration page on facebook as an example" >}}
+
+Using a dynamic DNS (DDNS) would allow you to update IP address when your endpoint IP changes. If you are hosting Remark42 container on cloud such as AWS EC2 or on your homelab, DDNS can be helpful.
+
+Selecting a proper one as your DDNS provider is important to your solution. There are a few reasons.
+
+Each OAuth provider has its own rules over what kind of OAuth redirect URIs is allowed, some just don't allow certain DDNS domains. For instance, facebook does not allow any `duckdns.org` domain as part of redirect URIs at time of writing.
+
+Second, a typical DDNS provider would resolve your domain to your public IP. It's what DDNS does. But for our purpose of hosting web apps, it's not a great idea to expose your public IP as it could be exploited during an attack. CDN is a better approach but some DDNS providers may not offer that.
+
+Service availability is another concern. Without any service level agreement, your API will become inaccessible when the DDNS it relies on stops working.
+
+Last, the security posture of some DDNS providers can be doubtful. When the service platform itself gets compromised, bad things could happen really quickly before you are made aware of as end user.
+
+ 👉 See my solution in twofold:
+
+- Use a large-scale commercial DNS provider that supports DNS management over API, or even better - when it offers CDN protection over your origin endpoint.
+
+- Use a reverse proxy such as Nginx to rewrite URLs so that multiple apps can be "tunneled through" a single domain name when needed. See [here]({{< ref "/post/hosting-multiple-containers-with-nginx-rewrite-rules" >}}) for detail.
+
+With respect to DDNS provider, I landed on Cloudflare after having reviewed a few choices including Cloudflare, Duckdns, No-IP. See my Cloudflare DDNS setup [here]({{< ref "/post/dynamic-dns-on-cloudflare" >}}).
+
+## Step 2. Protect(tunnel) your Endpoint
+
+I assume you are using Cloudflare as DNS provider as it's a prerequisite if you need to enable Cloudflare CDN.
+
+To enable CDN, first go to Cloudflare portal and enable CDN for your remark42 subdomain. In my case that's `api.davidxiao.me`.
+
+{{< figure src="cdn.png" title="Enabling Proxy by clicking on the Proxy status icon" >}}
+
+Second, modify caching level to "No query string". No Query String means it only delivers files from cache when there is no query string. It's the caching behavior we expect for an API endpoint, isn't it?
+
+{{< figure src="caching.png" title="Enabling Proxied by clicking on Proxy status icon" >}}
+
+## Step 2.1 Enable End-to-end HTTPS with Cloudflare
+
+There are several SSL options provided by Cloudflare. Check [this](https://support.cloudflare.com/hc/en-us/articles/200170416-End-to-end-HTTPS-with-Cloudflare-Part-3-SSL-options#h_845b3d60-9a03-4db0-8de6-20edc5b11057) out to understand the difference.
+
+Based on my own needs, I've set up a "Full" mode in Cloudflare, which ensures a secure connection between both the web browser and Cloudflare and between Cloudflare and my endpoint. This option uses a self-signed certificate at the my endpoint web server.
+
+{{< figure src="ssl1.png" title="Enabling SSL in Full mode" >}}
+
+{{< figure src="ssl2.png" title="Generate and download Cloudflare's self-signed certificates" >}}
+
+Save the origin certificat as `origin-cert.pem` and the private key as `priv.key`, place both files on your host and make sure they both have ownership of `root` and have `0600` permissions.
+
+Then you just need to add the file locations in your nginx configuration file. See below my configruation files for example:
+
+{{< gist davxiao c4f16ebbcdb2ec0701bcaad24640d12c >}}
+
+## Step 3. Integrate Remark42 to Your Hugo Site
+
+Override the `comments.html` template by:
+
+    $ cp your-project-root/themes/academic/layouts/partials/comments.html your-project-root/layouts/partials/comments.html
+
+and modify the new one as you see fit.
+
+The following is my modified version of `comments.html`.
+
+{{< gist davxiao 2c4373dbbf55823ccb3460cd79b37ee5 >}}
+
+## Conclusion
+
+Congrats! You've got the remark42 commenting system integrated to your Hugo site. Comment, Suggestion, and Feedback are all welcome!

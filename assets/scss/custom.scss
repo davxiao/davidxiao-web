@@ -119,12 +119,13 @@ div.article-container.pt-3 h1 {
 }
 
 div.article-container h2 {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 div.article-container h3 {
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .article-style figure img {
@@ -150,6 +151,22 @@ div.ml-3 a img {
 
 .article-header-caption a {
   border-bottom: none !important;
+}
+
+ul.navbar-nav.d-md-inline-flex {
+  font-weight: 400 !important;
+}
+
+img.article-banner {
+  border-radius: 5px !important;
+}
+
+.card-simple {
+  border-radius: 5px !important;
+}
+
+p.powered-by {
+  margin-bottom: 0.5rem !important;
 }
 
 /* Gist Embed - Dark Theme Styling */

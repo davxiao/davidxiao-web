@@ -10,10 +10,10 @@ profile: false
 categories:
   - Site-Building
 tags:
-  - Hugo
-  - Firebase
-  - Markdown
-  - Website
+  - hugo
+  - firehose
+  - markdown
+  - static website
 featured: false
 draft: false
 
@@ -70,9 +70,11 @@ First and foremost, let's take a look on what will be covered in the post.
 
 It's pretty straightforward. You come up with a great domain name. It is better to be concise and easy to remember. Be creative <3.
 
-Then complete the domain registration on any [Domain Name Registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) you prefer. I use [Google Domains](https://domains.google/) but there are other good choices such as [Namecheap](https://namecheap.com/) and [Go Daddy](https://godaddy.com/).
+Then complete the domain registration on any [Domain Name Registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) you prefer. ~~I use Google Domains but there are other good choices such as Namecheap and GoDaddy.~~
 
 {{< figure src="googledomain.png" title="Register a domain name on Google Domains" >}}
+
+_June 2020: For a few reasons, one being Google domains does not provide API for dynamic DNS (A records), I've changed my domain name registrar to [Namecheap](https://www.namecheap.com/), my DNS provider to [Cloudflare](https://www.cloudflare.com/)]._
 
 ## 2. Setting up Hugo
 
@@ -156,5 +158,3 @@ Go to **Hosting** on Firebase, click on "Add custom domain". Typically you wante
 When it's complete, you will be able to visit your website by your custom domain regsitered on step 1.
 
 {{< figure src="customdomain.png" title="Add custom domain to your website" >}}
-
-{{< comments-remark42 >}}

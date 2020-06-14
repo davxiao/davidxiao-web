@@ -13,8 +13,8 @@ tags:
   - raspberrypi
   - cross-compile
   - linux
-  - C++
-  - CMake
+  - c++
+  - cmake
 date: 2020-05-25
 lastmod: 2020-05-25
 featured: false
@@ -140,5 +140,3 @@ No worries, the following changes do not persist between restarts.
 ```
 
 {{% /alert %}}
-
-{{< comments-remark42 >}}

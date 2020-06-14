@@ -11,9 +11,9 @@ categories:
   - Cloud
 tags:
   - cloud
-  - GCP
-  - Google-Home
-  - coding
+  - gcp
+  - google home
+  - google cloud function
 date: 2020-05-26
 lastmod: 2020-05-26
 featured: false
@@ -115,5 +115,3 @@ On Actions console, click on "Deploy", choose "Alpha", click on "Manage Alpha Te
 When it's ready, click on "Create a release", and wait it to complete. It can take a few minutes.
 
 Congrats! You've just developed and deployed your first Google Home app in 10 minutes! Try say to your Google Home: "Hey Google, Talk to your_app_name_here" and see what happens :)
-
-{{< comments-remark42 >}}

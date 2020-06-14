@@ -6,14 +6,20 @@ subtitle: "Hardware"
 summary: "I plan on writing a few posts about my Homelab project. This is the first one focusing on the hardware spec and networking"
 profile: false
 authors:
- - david-xiao
+  - david-xiao
 categories:
- - Homelab
-tags: []
+  - Homelab
+tags:
+  - kvm
+  - homelab
+  - amd ryzen
+  - kvm
+  - proxmox
+  - pve
 date: 2020-05-28
 lastmod: 2020-05-28
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

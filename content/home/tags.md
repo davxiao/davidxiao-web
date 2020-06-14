@@ -3,7 +3,7 @@
 widget = "tag_cloud"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 5  # Order that this section will appear.
+weight = 20  # Order that this section will appear.
 
 title = "Topics"
 subtitle = ""
@@ -17,8 +17,8 @@ subtitle = ""
 
 [design]
   # Minimum and maximum font sizes (1.0 = 100%).
-  font_size_min = 1.25
-  font_size_max = 1.25
+  font_size_min = 1
+  font_size_max = 1
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.

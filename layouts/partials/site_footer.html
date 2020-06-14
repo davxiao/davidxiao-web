@@ -15,12 +15,9 @@
   <p class="powered-by">
     {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify}}. {{ end }}
 
-    Powered by the
+    Made with ❤️ , the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    Hosted on
-    <a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a>.
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>, <a href="https://remark42.com/" target="_blank" rel="noopener">Remark42</a>, <a href="https://cloudflare.com/" target="_blank" rel="noopener">Cloudflare</a> and <a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a>.
 
     {{ if not (in (slice "docs" "updates") .Type) }}
     <span class="float-right" aria-hidden="true">
