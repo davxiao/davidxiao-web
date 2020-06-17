@@ -121,6 +121,7 @@ Now visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser a
 Congrats! You've got your first Hugo website up and running on your local environment!
 
 {{% alert note %}}
+
 Hugo only binds to local network address for [security by default](https://en.wikipedia.org/wiki/Secure_by_default). If you need to test the site on another computer in your local network, run:
 
     $ hugo server -D --bind=0.0.0.0 ;

@@ -51,7 +51,11 @@ Click on any of the server will give you a brief explaination on the findings.
 
 {{< figure src="sslreport2.png" title="See explaination here" >}}
 
-I'm using Cloudflare as CDN for api.davidxiao.me, so I went on to the Cloudflare portal and updated the "Minimum TLS Version" to "TLS v1.2". Then performed a re-scan. It looks much better this time.
+I'm using Cloudflare as CDN for api.davidxiao.me, so I went on to the Cloudflare portal and updated the "Minimum TLS Version" to "TLS 1.2".
+
+{{< figure src="tls.png" title="Updating minimum TLS version to 1.2" >}}
+
+Then performed a re-scan. It looks much better this time.
 
 {{< figure src="sslreport3.png" title="The new results" >}}
 
