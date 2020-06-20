@@ -40,9 +40,11 @@ image:
 projects: []
 ---
 
-*TLDR 👉 It talks about hosting remark42 commenting system as Docker container; Leveraging Cloudflare to protect the remark42 endpoint; Integrating remark42 to a Hugo static site which is built on Hugo and using academic theme.*
+TLDR
 
-Before getting started, have a look at any post on my blog at [davidxiao.me](https://davidxiao.me/) and see the way commenting works. If you like what you saw, please read on.
+*👉 It talks about hosting remark42 commenting system as Docker container; Leveraging Cloudflare to protect the remark42 endpoint; Integrating remark42 to a static site which is built on Hugo and academic theme.*
+
+Before getting started, take a look at the posts on my blog at [davidxiao.me](https://davidxiao.me/) and see the way commenting works.
 
 ## What Will be Covered in This Post
 
@@ -51,7 +53,7 @@ Before getting started, have a look at any post on my blog at [davidxiao.me](htt
 - Protect your remark42 endpoint with Cloudflare CDN
 - Integrate remark42 to your Hugo site
 
-## Step 1. Hosting Remark42
+## Step 1. Deploy Remark42 on your Host
 
 [Remark42](https://remark42.com/) is an open source commenting system that can be deployed as container. It's self-contained with little external dependencies. You can find deployement guide on its Remark42's git repo.
 
@@ -65,58 +67,63 @@ SITE	                site id. For example: davidxiao
 SECRET	                required. can be a long and hard-to-guess string
 DEBUG	                true
 AUTH_GOOGLE_CID         your own value
-AUTH_GOOGLE_CSEC        same
-AUTH_FACEBOOK_CID       same
-AUTH_FACEBOOK_CSEC      same
-AUTH_TWITTER_CID        same
-AUTH_TWITTER_CSEC       same
-AUTH_GITHUB_CID         same
-AUTH_GITHUB_CSEC        same
+AUTH_GOOGLE_CSEC        your own value
+AUTH_FACEBOOK_CID       your own value
+AUTH_FACEBOOK_CSEC      your own value
+AUTH_TWITTER_CID        your own value
+AUTH_TWITTER_CSEC       your own value
+AUTH_GITHUB_CID         your own value
+AUTH_GITHUB_CSEC        your own value
 ADMIN_SHARED_EMAIL      mail address that will receive notifications such as new comments
 NOTIFY_EMAIL_ADMIN	true
 NOTIFY_TYPE	        email
 NOTIFY_EMAIL_FROM	mail address that is in the same domain see Mailgun settings. For example, mine is remark42@davidxiao.me
-AUTH_EMAIL_FROM	        same as above
+AUTH_EMAIL_FROM	        your own value
 ADMIN_SHARED_ID	        OAuth authenticated user id that has admin access. see https://github.com/umputun/remark42#admin-users
 SMTP_HOST	        smtp.mailgun.org
 SMTP_PORT	        465
 SMTP_TLS	        true
 SMTP_USERNAME	        SMTP credential from Mailgun
-SMTP_PASSWORD	        
+SMTP_PASSWORD	        your own credential
 ```
-NOTES: for more detail on Remark42 email configuration, check this [page](https://github.com/umputun/remark42/blob/master/docs/email.md)
+
+For more detail on how to configure email configuration on Remark42, check [this](https://github.com/umputun/remark42/blob/master/docs/email.md) out.
 
 ### App Registration on the OAuth Providers
 
-Before you can complete app registration on the [OAuth providers](https://en.wikipedia.org/wiki/List_of_OAuth_providers) supported by Remark42 (Google, facebook, twitter, github), you would need to determine the domain name of your Remark42 api endpoint.
+Before registering you Remark42 app on google, facebook, twitter and github (the [OAuth providers](https://en.wikipedia.org/wiki/List_of_OAuth_providers) Remark42 supports), you would need to determine the domain name of your Remark42 api endpoint.
 
 {{< figure src="facebook.jpg" title="My app registration page on facebook as an example" >}}
 
-Using a dynamic DNS (DDNS) would allow you to update IP address when your endpoint IP changes. If you are hosting Remark42 container on cloud such as AWS EC2 or on your homelab, DDNS can be helpful.
+DDNS(Dynamic DNS) comes in handy if you are hosting Remark42 container on cloud such as AWS EC2 or on your homelab since it allows you to update DNS A records accordingly whenever your endpoint IP changes.
 
-Selecting a proper one as your DDNS provider is important to your solution. There are a few reasons.
+{{% alert note %}}
 
-Each OAuth provider has its own rules over what kind of OAuth redirect URIs is allowed, some just don't allow certain DDNS domains. For instance, facebook does not allow any `duckdns.org` domain as part of redirect URIs at time of writing.
+Selecting a DDNS provider is important for a few reasons.
 
-Second, a typical DDNS provider would resolve your domain to your public IP. It's what DDNS does. But for our purpose of hosting web apps, it's not a great idea to expose your public IP as it could be exploited during an attack. CDN is a better approach but some DDNS providers may not offer that.
+- Protection of your host's public IP is important for self-hosting web apps. Using DDNS alone means your domain name gets resolved to your public IP.  DDNS + CDN is a better approach.
 
-Service availability is another concern. Without any service level agreement, your API will become inaccessible when the DDNS it relies on stops working.
+- Each OAuth provider has its own rules over whether an given OAuth redirect URI is allowed. For example, facebook does not allow any `duckdns.org` as part of redirect URI at time of writing.
 
-Last, the security posture of some DDNS providers can be doubtful. When the service platform itself gets compromised, bad things could happen really quickly before you are made aware of as end user.
+- Service availability concern. Your API will become inaccessible when the DDNS it relies on stops working.
 
- 👉 See my solution in twofold:
+- The security posture of the DDNS provider. When the service provider gets compromised, you DDNS domain name can be "hijacked".
 
-- Use a large-scale commercial DNS provider that supports DNS management over API, or even better - when it offers CDN protection over your origin endpoint.
+{{% /alert %}}
 
-- Use a reverse proxy such as Nginx to rewrite URLs so that multiple apps can be "tunneled through" a single domain name when needed. See [here]({{< ref "/post/hosting-multiple-containers-with-nginx-rewrite-rules" >}}) for detail.
+My approach:
 
-With respect to DDNS provider, I landed on Cloudflare after having reviewed a few choices including Cloudflare, Duckdns, No-IP. See my Cloudflare DDNS setup [here]({{< ref "/post/dynamic-dns-on-cloudflare" >}}).
+- Set up your public endpoint leveraging a DNS provider such as Cloudflare that has large operating scale, supports DDNS management over API and offers CDN protection over your private endpoint. See [here]({{< ref "/post/dynamic-dns-on-cloudflare" >}}) for more.
+
+- On your private endpoint, Use a reverse proxy such as Nginx to rewrite URLs so that multiple apps can be "tunneled through" a single domain name when needed. See [here]({{< ref "/post/hosting-multiple-containers-with-nginx-rewrite-rules" >}}) for more.
+
+- Use Nginx control policy to restrict access to only Cloudflare IPs and local trusted networks.
 
 ## Step 2. Protect(tunnel) your Endpoint
 
-I assume you are using Cloudflare as DNS provider as it's a prerequisite if you need to enable Cloudflare CDN.
+You need to use Cloudflare as DNS provider before enabling Cloudflare CDN.
 
-To enable CDN, first go to Cloudflare portal and enable CDN for your remark42 subdomain. In my case that's `api.davidxiao.me`.
+To enable CDN, first go to Cloudflare portal and enable CDN for your remark42 subdomain. In my case it's `api.davidxiao.me`.
 
 {{< figure src="cdn.png" title="Enabling Proxy by clicking on the Proxy status icon" >}}
 

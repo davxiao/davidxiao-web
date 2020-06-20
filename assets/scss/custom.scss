@@ -266,9 +266,25 @@ div.highlight pre {
   font-size: 0.85rem;
 }
 
+
+div.article-style pre {
+  background: #f9f2f4;
+  padding: 0.5rem 1rem 0.6rem 1rem !important; // top right bottom left
+  font-size: 0.85rem;
+}
+
+.dark div.article-style pre {
+  background: #333544;
+}
+
 div.highlight code {
   color: #dadada;
   background: #333544 !important;
+}
+
+.dark div.article-style pre code{
+  background: #333544;
+  color: #dadada;
 }
 
 p code {
@@ -309,15 +325,15 @@ summary {
 
 .home-section.wg-slider.carousel.slide div.container {
   position: relative;
-  top: 41.5%;
-  transform: translateY(-41.5%);
+  top: 30%;
+  transform: translateY(-30%);
 }
 
 /* font color for slides title */
 .wg-hero.dark .hero-title {
   color: #dadada;
 }
-
+ 
 /* font color for slides content  */
 .wg-hero.dark .hero-lead {
   color: #dadada;

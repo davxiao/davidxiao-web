@@ -16,10 +16,25 @@ height = "calc(100vh - 70px)"
 
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
+
+[[item]]
+  title = "Build a Static Blog Site in 2020"
+  content = "<br>Wait... What does it mean by *\"static\"?* Can visitors post comments at all? Let's take a closer look 😀<br><br>"
+  align = "left"  # Choose `center`, `left`, or `right`.
+
+  overlay_color = "#555"  # An HTML color value.
+  overlay_img = "headers/athousandsitesinone-color.jpg"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.85  # Darken the image. Value in range 0-1.
+
+  cta_label = "Check it Out"
+  cta_url = "/category/site-building/"
+  cta_icon_pack = "fas"
+  cta_icon = "sitemap"
+
 [[item]]
   title = "My Homelab"
-  content = "<br>I built up my homelab server using *Proxmox* and other open source tools. You can do it youself 🙌 🎉 🍸<br><br>"
-  align = "left"  # Choose `center`, `left`, or `right`.
+  content = "<br>I *DIYed* my homelab server with [Proxmox](https://www.proxmox.com/en/proxmox-ve) and a few open source tools. You can do it too 🙌 🎉 🍸<br><br>"
+  align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
@@ -36,20 +51,6 @@ height = "calc(100vh - 70px)"
   cta_icon = "server"
 
 [[item]]
-  title = "Build a Static Blog Site in 2020"
-  content = "<br>Why *\"static\"?* How much does it cost?<br>Can I still interact with visitors?<br>Let's take a closer look 😀<br><br>"
-  align = "center"  # Choose `center`, `left`, or `right`.
-
-  overlay_color = "#555"  # An HTML color value.
-  overlay_img = "headers/athousandsitesinone-color.jpg"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.85  # Darken the image. Value in range 0-1.
-
-  cta_label = "Check it Out"
-  cta_url = "/category/site-building/"
-  cta_icon_pack = "fas"
-  cta_icon = "sitemap"
-
-[[item]]
   title = "What I Have Been Reading"
   content = "My reading list of nonfiction books. I enjoy reading them but you can draw your own conclusions."
   align = "right"
@@ -58,9 +59,9 @@ height = "calc(100vh - 70px)"
   overlay_img = "headers/book-unsplash.jpg"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.85  # Darken the image. Value in range 0-1.
 
-  cta_label = "Go To the List"
+  cta_label = "Show Me the List"
   cta_url = "/post/what-ive-been-reading/"
   cta_icon_pack = "fas"
-  cta_icon = "sitemap"
+  cta_icon = "book-reader"
 
 +++
