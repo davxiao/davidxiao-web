@@ -20,7 +20,7 @@ height = "400px"
 
 [[item]]
   title = "Build a Static Blog Site in 2020"
-  content = "<br>Wait... What does it mean by *\"static\"?* Can visitors post comments at all? Let's take a closer look 😀<br><br>"
+  content = "Wait... What does it mean by *\"static\"?* Can visitors post comments at all? Let's take a closer look 😀"
   align = "left"  # Choose `center`, `left`, or `right`.
 
   overlay_color = "#555"  # An HTML color value.
@@ -34,8 +34,8 @@ height = "400px"
 
 [[item]]
   title = "My Homelab"
-  content = "<br>I *DIYed* my homelab server with [Proxmox](https://www.proxmox.com/en/proxmox-ve) and a few open source tools. You can do it too 🙌 🎉 🍸<br><br>"
-  align = "center"  # Choose `center`, `left`, or `right`.
+  content = "I *DIYed* my homelab server with [Proxmox](https://www.proxmox.com/en/proxmox-ve) and a few open source tools. You can do it too 🙌 🎉 🍸"
+  align = "left"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
@@ -54,7 +54,7 @@ height = "400px"
 [[item]]
   title = "What I Have Been Reading"
   content = "My reading list of nonfiction books. I enjoy reading them but you can draw your own conclusions."
-  align = "right"
+  align = "left"
 
   overlay_color = "#333"  # An HTML color value.
   overlay_img = "headers/book-unsplash.jpg"  # Image path relative to your `static/img/` folder.
