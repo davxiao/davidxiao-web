@@ -31,11 +31,9 @@ projects: []
 ---
 
 A drop bar road bike in black painting fell off my bike rack between around 4-5pm when I was driving westbound on St.John between Yonge and Bathurst  then Southbound on Bathurst towards Richmond Hill. 
-I turned around in ten minutes but did not see it. If anyone has it please DM me. Much appreciated! 
+I turned around in ten minutes but did not see it. If anyone has it please DM me. Much appreciated!
 
-
-
-Devinci HATCHET APEX    G/57cm  standover 774  wheelbase 1061   seattube 530    http://www.devinci.com/bikes/bike_1274_scategory_332
+Devinci HATCHET APEX    G/57cm  standover 774  wheelbase 1061    700c x 45mm / 650b x 2.1 tire clearance   http://www.devinci.com/bikes/bike_1274_scategory_332
 
 Giant TOUGHROAD SLR GX 0   2018  $2,199 Size L standover 802   seat tube length 51cm   wheelbase 1071
 

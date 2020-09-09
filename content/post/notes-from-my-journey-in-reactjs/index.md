@@ -14,10 +14,10 @@ tags:
 categories:
   - Coding
 date: 2020-06-14
-lastmod: 2020-06-14
+lastmod: 2020-06-21
 diagram: true
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -36,15 +36,17 @@ image:
 projects: []
 ---
 
-All credits go to their original authors.
+TLDR
 
-This is a living document I put together as I learn. Some notes here were extracted from the learning materials in the reference section.
+As a recovering C++ developer learning React, I put together some notes along the journey.
 
-I tried to include links wherever possible, if I missed anything, I will be more than happy to make updates if you let me know.
+Some of the notes and example code were extracted from the materials listed in the reference. I've tried to include links but feel free to let me know if I missed something.
+
+Credit goes to the original authors.
 
 ## Reference
 
-- The [step-by-step guide](https://reactjs.org/docs/hello-world.html) on reactjs.org
+- [Step-by-step guide](https://reactjs.org/docs/hello-world.html). Great learning material.
 
 ## What is React.js
 
@@ -54,55 +56,93 @@ I tried to include links wherever possible, if I missed anything, I will be more
 
 ## Elements
 
-Elements are the smallest building blocks of React apps.
-
 An element describes what you want to see on the screen:
 
 ```jsx
 const element = <h1>Hello world</h1>;
+const div1 = <div />;
 ```
-
-Unlike browser DOM elements, React elements are plain objects, and are *computationally* cheap to create. React DOM takes care of updating the DOM to match the React elements.
 
 ## Components
 
-Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
-
-Components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
-
-A simple one:
+Elements such as `<div />` are defined in [HTML5](https://developer.mozilla.org/docs/Web/HTML/Element/div). React extends it by introducing user-defined elements such as
 
 ```jsx
-function Avatar(props) {
-  return (
-    <img className="Avatar"
-      src={props.user.avatarUrl}
-      alt={props.user.name}
-    />
-  );
+<Welcome name="Sara" />
+```
+
+`Welcome` is a user-defined component. In React, always start component names with a capital letter to follow the naming convention.
+
+### Why Components
+
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+
+React component can be declared as a JS function or a JS class. Either way, it accepts input (called “props”) and return React elements describing what should appear on the screen.
+
+When React sees an element representing a user-defined component, it wraps up JSX attributes and children and passes it as a single object (called `props`) to the component implicitly without user code.
+
+`props`stands for properties.
+
+### React function
+
+An example:
+
+```jsx
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
+
+JS code starts at the top of the file. It gets executed from top to bottom. There is no entry point such as what "main()" has to do in C++.
+
+What happens in the example above is:
+
+1. React calls ReactDOM.render() with the `<Welcome name="Sara" />`
+
+2. React sees `Welcome` is a user-defined component and calls its corresponding function with `{name: 'Sara'}` as the props.
+3. Welcome component returns `<h1>Hello, Sara</h1>` as the result.
+4. React takes care of updating the DOM with `<h1>Hello, Sara</h1>`.
+
+### React class
+
+The function component example above can be equivalently rewritten as a class component:
+
+```jsx
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
 }
 ```
 
-## Props
+React class component always "inherited" from `React.Component`.
 
-`props` (really properties) is a collection of parameters passed on to the component.
+`render()` is the only method that any class "inherited" from `React.Component` must declare.
 
-Props is actually stored within the component. Any method in this component (class) can reference the props using `this.props.`
+{{% alert note %}}
 
-We recommend naming props from the component’s own point of view rather than the context in which it is being used.
+Think of `render()` as a C++ pure virtual function in `React.Component`.
 
-In this example, despite the `Avatar` will be used in a commenting component, we've given its prop a more generic name: `user` rather than `author`. The rationale being: It doesn’t need to know context such as where it is being rendered. That's a sort of isolation that helps in producing clear code.
+A derived class would have to implement it before the class can be instantiated.
+
+{{% /alert %}}
 
 ## Calling a component in another component
 
-The diagram illustrates how component calls another component. 
+Let's take function component as an example.
 
 ```mermaid
 graph TD;
   Comment-->UserInfo-->Avatar;
 ```
 
-Comment --> UserInfo:
+Comment passed the value of its own `props.author` to UserInfo.
 
 ```jsx
 function Comment(props) {
@@ -120,7 +160,7 @@ function Comment(props) {
 }
 ```
 
-UserInfo --> Avatar:
+UserInfo's props contains a key value pair "user=..." received from Comment. The value then gets passed down to Avatar.
 
 ```jsx
 function UserInfo(props) {
@@ -135,13 +175,41 @@ function UserInfo(props) {
 }
 ```
 
-## Props are Immutable, i.e. Read-Only
+## Props
+
+Props gets passed to the constructor of class and stored as a class variable. Any method thereafer can reference it using `this.props`
+
+{{% alert note %}}
+In a class component, think of `this.props` as a const reference member variable in C++.
+
+It is initiated within `constructor(props)` where `super(props)` is called, the superclass always being `React.Component`.
+{{% /alert %}}
+
+We recommend naming props from the component’s own point of view rather than the context in which it is being used. The rationale being: It doesn’t need to know context such as where it is being rendered.
+
+That's a sort of isolation that helps in producing clear code.
+
+### Props are Immutable
 
 Whether you declare a component as a function or a class, it must never modify its own props.
 
+The following code is valid in javascript syntax but should not be used as React component as it changes its own input:
+
+```jsx
+function withdraw(account, amount) {
+  account.total -= amount;
+}
+```
+
+{{% alert note %}}
+Think of JS function parameter as pass by reference in C++.
+
+In React, treat `props` as if it is const reference in C++.
+{{% /alert %}}
+
 ## Class, State and Lifecycle
 
-`class` is introduced in ES6. It is common practice to write a class as opposed to function.
+One difference between class and function is that class has a special object called `this.states`. states acts as a "container" that preserves variables between calls. In other words, class oject is "stateful" while function is "stateless".
 
 A class has a few built-in methods including:
 
@@ -155,8 +223,6 @@ A diagram to help understand lifecycle:
 {{< figure src="lifecycle.png" title="React lifecycle methods diagram" >}}
 
 For a visual reference, click [here](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-
-A typical component class also need to implement its own `render()`.
 
 `state` is a built-in object in class.
 
@@ -229,7 +295,7 @@ In React, both this.props and this.state represent the rendered values, i.e. wha
 
 ### Both props and state can be accessed by "this"
 
-Both `this.state.` and `this.props.` are valid calls within the class scope.
+Both `this.state` and `this.props` are valid within the class scope.
 
 ### Props are immutable
 
@@ -260,7 +326,7 @@ It is not supposed to be modified in any way. If the component needs to be "stat
 
 ### State Updates May Be Asynchronous
 
-`setState()` schedules an update to a component’s state object. When state changes, the component responds by re-rendering.
+`setState()` "schedules" an update to a component’s state object. When state changes, the component responds by re-rendering.
 
 Consider using setState() that accepts a function rather than an object when you need to update state variables.
 
@@ -319,22 +385,32 @@ When you update `comments` with the following code, it leaves `this.state.posts`
 
 ### State is not accessible to other components
 
-State has a limited scope to its own component. 
+State is not accessible to any component other than the one that owns and sets it.
 
-It is not accessible to any component other than the one that owns and sets it.
+{{% alert note %}}
+
+Think of state as a "protected" member variable encapsulated in React.Component class. It can be accessed by its derived classed but not from outside.
+
+{{% /alert %}}
 
 It is the philosophy that neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn’t care its implementation details, such as whether it is defined as a function or a class.
 
 In React apps, whether a component is stateful or stateless is considered an implementation detail of the component that may change over time. You can use stateless components inside stateful components, and vice versa.
 
-### Binding and "this." in any class method
+### Be cautious about using "this" in a class method
 
-`this` is `undefined` until the it is bound. 
+Unlike in C++ where `this` is accessible in any class method including in the constructor, in JS, `this` is `undefined` until it is bound.
 
-<details>
-<summary>In JavaScript, class methods are not bound by default.</summary>
+First, let's take a look at [this example](https://codepen.io/davxiao/pen/PoZpajQ) where I purposely made an attempt to access `this` in constructor and get the following error:
 
-If you forget to bind `this.handleClick` and pass it to `onClick`, this will be undefined when the function is actually called.
+```
+Uncaught ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+ at pen.js:-12
+```
+
+Second, in member methods `this` is `undefined` until it is bound.
+
+In the following example code, if you forget to bind `this.handleClick` and pass it to `onClick`, this will be undefined when the function is actually called.
 
 This is not React-specific; it is a part of [how functions work in JavaScript](https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/).
 

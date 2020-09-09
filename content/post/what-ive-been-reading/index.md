@@ -11,7 +11,7 @@ tags:
   - book
   - thomas-sowell
 categories:
-  - reading
+  - Reading
 date: 2020-06-17
 lastmod: 2020-06-17
 featured: false

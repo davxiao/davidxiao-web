@@ -95,7 +95,7 @@ Before registering you Remark42 app on google, facebook, twitter and github (the
 
 {{< figure src="facebook.jpg" title="My app registration page on facebook as an example" >}}
 
-DDNS(Dynamic DNS) comes in handy if you are hosting Remark42 container on cloud such as AWS EC2 or on your homelab since it allows you to update DNS A records accordingly whenever your endpoint IP changes.
+DDNS(Dynamic DNS) comes in handy whether you are hosting Remark42 container on cloud such as AWS EC2 or on your homelab, since it allows you to update DNS A records whenever your endpoint IP changes.
 
 {{% alert note %}}
 
@@ -105,9 +105,9 @@ Selecting a DDNS provider is important for a few reasons.
 
 - Each OAuth provider has its own rules over whether an given OAuth redirect URI is allowed. For example, facebook does not allow any `duckdns.org` as part of redirect URI at time of writing.
 
-- Service availability concern. Your API will become inaccessible when the DDNS it relies on stops working.
+- Service availability concern. Your app will become inaccessible when the DDNS it relies on stops working.
 
-- The security posture of the DDNS provider. When the service provider gets compromised, you DDNS domain name can be "hijacked".
+- The security posture of the DDNS provider. If the service provider gets compromised, you DDNS domain name can be "hijacked".
 
 {{% /alert %}}
 
