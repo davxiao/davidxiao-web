@@ -1,7 +1,7 @@
 {{ if (index site.Params.comments.commentable .Type) | and (ne .Params.commentable false) | or .Params.commentable }}
 <section id="comments">
   <hr>
-  <h2>Comments</h2><div id="remark42"></div>
+  <div id="remark42"></div>
   <script>
     var remark_config = {
       host: "https://api.davidxiao.me/remark42", // hostname of remark server, same as REMARK_URL in backend config, e.g. "https://demo.remark42.com"
@@ -32,7 +32,7 @@
                       // If you deal with query parameters make sure you pass only significant part of it
                       // in well defined order
       max_shown_comments: 10, // optional param; if it isn't defined default value (15) will be used
-      theme: 'dark', // optional param; if it isn't defined default value ('light') will be used
+      theme: 'light', // optional param; if it isn't defined default value ('light') will be used
       locale: 'en' // set up locale and language, if it isn't defined default value ('en') will be used
     };
 

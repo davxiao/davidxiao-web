@@ -12,7 +12,8 @@ interval = 7000
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
 # 70px is the navbar height.
-height = "calc(100vh - 70px)"
+# height = "calc(100vh - 70px)"
+height = "400px"
 
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
