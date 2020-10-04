@@ -10,15 +10,15 @@ authors:
 superuser: true
 
 # Role/position
-role: Senior Cloud Engineer
+role: Sr. Cloud Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: TMX Group
+- name: TMX
   url: "https://www.tmx.com/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include cybersecurity, cloud security and AI.
+bio: My interests include cybersecurity and public cloud such as AWS.
 
 #interests:
 #- Artificial Intelligence
@@ -44,7 +44,7 @@ social:
   link: https://github.com/davxiao
 - icon: facebook
   icon_pack: fab
-  link: https://www.linkedin.com/in/alisonpresmaneshill/
+  link: https://www.facebook.com/davxiao
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/davxiao
@@ -64,5 +64,6 @@ email: ""
 #- Visitors
 ---
 
-David Xiao is a senior cloud engineer at Toronto Stock Exchange.
+My interests include cybersecurity and public cloud such as AWS.
 
+Outside of work, I enjoy outdoor activies and working on my Private Pilot License when I can have time.

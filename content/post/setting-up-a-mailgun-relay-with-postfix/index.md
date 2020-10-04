@@ -98,24 +98,30 @@ Port 465 is the "straight-in" SSL/TLS in that it deals with every session as TLS
 
 Postfix can be easily installed on almost any Linux distro. On Ubuntu, run:
 
-    sudo apt install libsasl2-modules postfix ;
+```text
+sudo apt install libsasl2-modules postfix ;
+```
 
 Then create a file `/etc/postfix/sasl/sasl_passwd_mailgun`. Copy the following line into the file, replacing `your-username@mg.yourdomain.com:your-password-here` with your actual SMTP credential.
 
-    [smtp.mailgun.org]:587 your-username@mg.yourdomain.com:your-password-here
+```text
+[smtp.mailgun.org]:587 your-username@mg.yourdomain.com:your-password-here
+```
 
 Run:
-
-    sudo postmap /etc/postfix/sasl/sasl_passwd_mailgun ;
-
+```text
+sudo postmap /etc/postfix/sasl/sasl_passwd_mailgun ;
+```
 If all went well, you have a new file as `/etc/postfix/sasl/sasl_passwd_mailgun.db`. It's what Postfix will be reading from for Mailgun SMTP authentication.
 
 ### Secure the passwords
 
 Both `sasl_passwd_mailgun` and `sasl_passwd_mailgun.db` contain plain text of your app password, to secure the access, you need to:
 
-    sudo chown root:root /etc/postfix/sasl/sasl_passwd_mailgun /etc/postfix/sasl/sasl_passwd_mailgun.db ;
-    sudo chmod 0600 /etc/postfix/sasl/sasl_passwd_mailgun /etc/postfix/sasl/sasl_passwd_mailgun.db ;
+```text
+sudo chown root:root /etc/postfix/sasl/sasl_passwd_mailgun /etc/postfix/sasl/sasl_passwd_mailgun.db ;
+sudo chmod 0600 /etc/postfix/sasl/sasl_passwd_mailgun /etc/postfix/sasl/sasl_passwd_mailgun.db ;
+```
 
 ### Setting up
 
@@ -141,7 +147,9 @@ In the example above, I am allowing anonymous SMTP authentication from mynetwork
 
 When config file is done, reload Postfix configurations without having to restart the service:
 
-    sudo postfix reload ;
+```text
+sudo postfix reload ;
+```
 
 For SMTP testing, I personally like to use [swaks](http://www.jetmore.org/john/code/swaks/), a purpose-built Perl script.
 
@@ -158,10 +166,11 @@ With swaks installed, it will be just a one-liner to send out a testing mail:
 ```
 
 If you suspect something went wrong, go check the logs:
-
-    sudo tail -f /var/log/syslog ;
-    # and
-    sudo tail -f /var/log/mail.err ;
+```bash
+sudo tail -f /var/log/syslog ;
+# and
+sudo tail -f /var/log/mail.err ;
+```
 
 That's it!
 

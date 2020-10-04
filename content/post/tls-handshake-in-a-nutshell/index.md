@@ -14,7 +14,7 @@ categories:
   - Information Security
   - TLS
 date: 2020-08-31
-lastmod: 2020-08-31
+lastmod: 2020-09-10
 diagram: true
 featured: false
 draft: false
@@ -39,13 +39,13 @@ At a high level, the following occurs during a TLS handshake:
 
 ```mermaid
 graph TD;
-    A[Client establishes a TCP connection to the server] -->B[Client negotiates and agrees on TLS version and <br/>cipher suite] -->C[Clients validates server's certificate so as to confirm the server<br/> is who it says it is]
-    C --> D[Client and server agrees on key exchange protocol. <br/>RSA and Diffie-Hellman are two common KEP algogirhtms]
-    D --> E{Key Exchange Protocol}
-    E -->|RSA| F[When both client and server have <br/>the client random, the server random, <br/>and the premaster secret, each side <br/>independently combine these three inputs<br/> to come up with the session keys. <br/>They should both arrive at the same value]
-    E -->|DH| G[Both client and server independently <br/>agree on the same secret value using data <br/>exchanged in plaintext only]
-    F -->H[Regardless of which KEP was used, <br/>the rest of the session uses the agreed key, an ephemeral symmetric key, <br/>to encrypt the communication both ways going forward]
-    G -->H
+    A[Client establishes a TCP connection to the server] -->B[Client sends Hello and list of cipher suites including TLS version] -->C[Server sends Hello, selected suite and certificate] --> D[Client validates certificate]
+    D --> E[Client and server starts key exchange process. <br/>RSA and Diffie-Hellman are two common KEP algogirhtms]
+    E --> F{Key Exchange Protocol}
+    F -->|RSA| G[When both client and server have <br/>the client random, the server random, <br/>and the premaster secret, each side <br/>independently combine these three inputs<br/> to come up with the session keys. <br/>They should both arrive at the same value]
+    F -->|DH| H[Both client and server independently <br/>agree on the same secret value using DH algorithm<br/> usually accompanied by RSA signature]
+    G -->I[Regardless of which KEP was used, <br/>the rest of the session uses the agreed key, an ephemeral symmetric key, <br/>to encrypt the communication both ways going forward]
+    H -->I
 ```
 
 Read more about DH [here](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#Cryptographic_explanation)
@@ -62,4 +62,21 @@ Read more about DH [here](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_k
 
 - HTTPS means "HTTP over TLS".
 
-- Both SSH and TLS are purpose-built for secure communication over the Internet, but they are very different in many ways. Check out [my another post]({{< ref "/post/ssh-and-tls" >}}) where I explain the differences between the two. Thanks!
+- Both SSH and TLS are purpose-built for secure communication over the Internet, but they are very different in many ways. Check out [my another post]({{< ref "/post/ssh-and-tls" >}}) where I explain the differences between the two.
+
+## Glossary
+
+### Cipher Suite
+
+A cipher suite is a set of algorithms. It usually contain include: a key exchange algorithm, a bulk encryption algorithm, and a message authentication code (MAC) algorithm.
+
+For example, `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256` means:
+
+- ECDHE_RSA indicates the key exchange algorithm being used.
+
+- AES_128_GCM indicates the block cipher being used to encrypt the message stream, together with the block cipher mode of operation.
+- SHA256 indicates the message authentication algorithm which is used to authenticate a message.
+
+### ECDHE_RSA key exchange algorithm
+
+In a nutshell, it is ECDHE signed by RSA. Signing defeats man-in-the-middle attack. See detail [here](https://en.wikipedia.org/wiki/Elliptic-curve_Diffie-Hellman)

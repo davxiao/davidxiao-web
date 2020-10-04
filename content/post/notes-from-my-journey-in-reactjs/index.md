@@ -1,18 +1,18 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Notes from My Journey in React.js"
+title: "Notes from My Journey Learning Javascript and React.js"
 subtitle: ""
 summary: "The Good, ~~the Bad and the Ugly.~~"
 profile: false
 authors:
   - david-xiao
 tags:
-  - react.js
   - javascript
-  - learning
+  - react.js
 categories:
   - Coding
+  - React
 date: 2020-06-14
 lastmod: 2020-06-21
 diagram: true

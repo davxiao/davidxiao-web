@@ -37,17 +37,17 @@ TLDR: This post is my collection of articles related to threat modeling and Micr
 
 ## What Is Threat Modeling
 
-At a high level, threat modeling is a process of put the "bad guy" hat on and conduct an security assessment over a system (such as a website or a mobile app) to identify and prioritize threats and mitigations.
+At a high level, threat modeling is a process of putting the "bad guy" hat on and conducting an security assessment over a system (such as a website or a mobile app) to identify and prioritize threats and mitigations.
 
-A more comphrensive definition of threat model can be found on [Wikipedia](https://en.wikipedia.org/wiki/Threat_model).
+A more complete definition can be found on [Wikipedia](https://en.wikipedia.org/wiki/Threat_model).
 
-There are many ways to do threat modeling. Depending on what type of system and workloads are in scope, the threat library applicable to it can vary a lot.
+There are many ways to do threat modeling. Depending on the types of system and workloads that are in scope, the applicable threats can vary a lot.
 
-For example, threat modeling over a set of highly scalable workloads deployed on MS Azure may start from a threat library that includes portential threats relevant to Azure services in use, while threat modeling over a simple web application hosted on on-prem data center may start from a different set of threats relevant to host based security and OWASP Top 10.
+For example, threat modeling over a set of highly scalable workloads deployed on MS Azure might start from a threat library that includes portential threats relevant to Azure services in use, while assessing over a simple web application hosted on on-prem data center might start from a different set of threats relevant to host based security and OWASP Top 10.
 
 ## What Is STRIDE
 
-STRIDE is a threat model and a methodology that developed and adopted in Microsoft over the years.
+STRIDE is both a threat model framework and a methodology that developed and adopted in Microsoft over the years.
 
 STRIDE stands for:
 
@@ -58,6 +58,10 @@ STRIDE stands for:
 - **Information Disclosure**: Exposing information to someone not authorized to see it.
 - **Denial of Service**: Deny or degrade service to users.
 - **Elevation of Privilege**: Gain capabilities without proper authorization.
+
+Microsoft suggests the following approach when conducting a threat modeling:
+
+{{< figure src="https://docs.microsoft.com/en-us/azure/security/develop/media/threat-modeling-tool-getting-started/sdlapproach.png" title="Threat Modeling Process" >}}
 
 ## Most Current Articles
 

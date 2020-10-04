@@ -3,7 +3,7 @@
 
 title: "Integrating a Self-Hosting Commenting System to Your Site"
 subtitle: "using Remark42, Hugo, Docker and Cloudflare"
-summary: "If you are looking for integrating a commenting system on your site but also like to have control over its infrastructure and data, this is how I did it."
+summary: "If you are looking for guidance on integrating an open-source commenting system such as Remark42 to your site, here is how I did it."
 profile: false
 authors:
   - david-xiao
@@ -40,9 +40,9 @@ image:
 projects: []
 ---
 
-TLDR
+TLDR;
 
-*👉 It talks about hosting remark42 commenting system as Docker container; Leveraging Cloudflare to protect the remark42 endpoint; Integrating remark42 to a static site which is built on Hugo and academic theme.*
+*👉 This post talks about hosting remark42 commenting system as Docker container; Leveraging Cloudflare to protect the remark42 endpoint; Integrating remark42 to a static site which is built on Hugo and academic theme.*
 
 Before getting started, take a look at the posts on my blog at [davidxiao.me](https://davidxiao.me/) and see the way commenting works.
 
@@ -61,7 +61,7 @@ Feel free to do container your way but if you are interested in what tool I use 
 
 I have the following parameters on my remark42 container:
 
-```
+```text
 REMARK_URL              make sure it has the full path if you are using reverse proxy and rewrites, e.g. https://api.davidxiao.me/remark42
 SITE	                site id. For example: davidxiao
 SECRET	                required. can be a long and hard-to-guess string
@@ -75,14 +75,14 @@ AUTH_TWITTER_CSEC       your own value
 AUTH_GITHUB_CID         your own value
 AUTH_GITHUB_CSEC        your own value
 ADMIN_SHARED_EMAIL      mail address that will receive notifications such as new comments
-NOTIFY_EMAIL_ADMIN	true
-NOTIFY_TYPE	        email
-NOTIFY_EMAIL_FROM	mail address that is in the same domain see Mailgun settings. For example, mine is remark42@davidxiao.me
+NOTIFY_EMAIL_ADMIN	    true
+NOTIFY_TYPE	            email
+NOTIFY_EMAIL_FROM	    mail address that is in the same domain see Mailgun settings. For example, mine is remark42@davidxiao.me
 AUTH_EMAIL_FROM	        your own value
 ADMIN_SHARED_ID	        OAuth authenticated user id that has admin access. see https://github.com/umputun/remark42#admin-users
-SMTP_HOST	        smtp.mailgun.org
-SMTP_PORT	        465
-SMTP_TLS	        true
+SMTP_HOST	            smtp.mailgun.org
+SMTP_PORT	            465
+SMTP_TLS	            true
 SMTP_USERNAME	        SMTP credential from Mailgun
 SMTP_PASSWORD	        your own credential
 ```
@@ -151,7 +151,9 @@ Then you just need to add the file locations in your nginx configuration file. S
 
 Override the `comments.html` template by:
 
-    $ cp your-project-root/themes/academic/layouts/partials/comments.html your-project-root/layouts/partials/comments.html
+```shell
+$ cp your-project-root/themes/academic/layouts/partials/comments.html your-project-root/layouts/partials/comments.html
+```
 
 and modify the new one as you see fit.
 
@@ -161,4 +163,6 @@ The following is my modified version of `comments.html`.
 
 ## Conclusion
 
-Congrats! You've got the remark42 commenting system integrated to your Hugo site. Comment, Suggestion, and Feedback are all welcome!
+Congrats! You've got the remark42 commenting system integrated to your Hugo site.
+
+Comments and Feedback are welcome!

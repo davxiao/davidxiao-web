@@ -34,13 +34,13 @@ image:
 projects: []
 ---
 
-Both TLS and SSH are security protocols, each meant to solve a set of problems.
+Both TLS and SSH are security protocols aimed to solve a specific set of problems.
 
-TLS is the transport layer of HTTPS protocol, SSH is the protocol designed to replace plaintext Telnet protocol.
+TLS is the transport layer of HTTPS protocol while SSH is designed to replace plaintext Telnet protocol.
 
-Architecture wise, TLS is relatively simply: It has a handshake protocol that does the authentication and agrees on a session key that will be used to encrypt the rest of the communication.
+Architecture wise, TLS is relatively simple: It has a handshake protocol that does the authentication and agrees on a session key that will be used to encrypt the rest of the communication.
 
-SSH is more [complicated](https://en.wikipedia.org/wiki/Secure_Shell#Architecture): It has the following main components:
+SSH is more [complicated](https://en.wikipedia.org/wiki/Secure_Shell#Architecture) than TLS. It has the following main components:
 
 - transport layer;
 

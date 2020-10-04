@@ -2,8 +2,8 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "A New Pilot in the Making"
-subtitle: ""
-summary: ""
+subtitle: "My notes taken during PPL training"
+summary: "This is some of the notes I took when taking PPL flight lessons."
 profile: false
 authors:
   - david-xiao
@@ -13,7 +13,7 @@ tags:
 categories:
   - Aviation
 date: 2020-06-23
-lastmod: 2020-06-23
+lastmod: 2020-09-10
 featured: false
 draft: false
 
@@ -33,6 +33,24 @@ image:
 projects: []
 ---
 
+## Primer
+
+PPL stands for Private Pilot License. In Canada and US, PPL holders can fly an airplane under VFR rules.
+
+The type of airplane PPL holder can legally fly depends on a few things. Usually one can legally fly small/light airplanes that he is most familiar with, such as Cessna 172 trainer.
+
+To fly complex, high performance or tailwheel airplanes, one need to obtain respective `endorsement` from a certified instructor first.
+
+For heavier airplane or those equipped with turbojet powerplant, `type rating` is required before he can legally fly one.
+
+Above all, PPL holder needs to stay current and competent before he decides to fly as pilot. The old aviation proverb says, "Takeoffs are optional, landings are mandatory".
+
+## Regulatory Body and Laws / Regulations
+
+In Canada, Transport Canada governs general aviation.
+
+In US, FAA governs general aviation.
+
 CARs: Canadian Aviation Regulations. [Link on Transport Canada](https://www.tc.gc.ca/en/transport-canada/corporate/acts-regulations/regulations/sor-96-433.html)
 
 ## Cruising Altitudes
@@ -41,35 +59,57 @@ When flying VFR above 3,000 AGL, remember "East is Odd, West is Even Odder" on M
 
 602.34 [Cruising Altitudes and Cruising Flight Levels](https://laws-lois.justice.gc.ca/eng/regulations/SOR-96-433/FullText.html#h-993895)
 
-## En Route Climb
+## Cessna 172M procedures
+
+### Precautionary Landing
+
+**COWLS check**
+
+- Civilization (nearby population)
+
+- Obstacle (tower, treeline, powerline)
+- Wind (headwind on final)
+- Length of the surface (2000 ft would be minimal for C172 considering obstacle clearance, touchdown area and distance required for T/O)
+- Surface condition (too soft, too much rough, uneven terrain)
+
+**High Pass and Low Pass**
+
+- High pass is completed at circuit altitude: 60kt with flaps 20
+
+- If satisfied with the surface, a low pass is completed at 500 AGL with same speed and configuration
+- In both high pass and low pass, the key is to trim for straight and level flight at the correct speed and altitude before abeam threshold.
+- Use the same pitch for speed and power for decent technique. For C172, 1900rpm is rule of thumb that can keep 60kt without decending.
+- On the downwind for landing, complete 3P: Prelanding checklist, Pan call, and Pax - passenger briefing)
+
+### Enroute Climb
 
 Lookout to clear the climb
 
 APT - Attitude, Power (control the adverse yaw), Trim
 
-Level off from climbing - The same APT applies.
+Level off from climbing - The same APT procedure applies.
 
-[Ref](https://www.studyflight.com/climbing/)
+[Reference](https://www.studyflight.com/climbing/)
 
 Climb
 
-```
-Pitch up and hold the nose on the horizon.
+```text
+Pitch up and hold the nose on the horizon
 
 Peek at A/S as it decreases to 75
 
-Full Power, Mix Rich. Carb Off. Right rudder.
+Full Power, Mix Rich. Carb Off. Right rudder when needed
 
-Trim.
+Trim
 ```
 
-Level Off
+Level Off from enroute climb
 
-Starts at 50-100ft below target. Gradually push the nose down to cruise attitude.
+Starts at 50-100ft below target altitude. Gradually push the nose down to cruise attitude.
 
-Reduce Power to Cruise, 2300rpm. Left Rudder when needed
+Reduce Power to Cruise setting: 2300rpm. Left Rudder when needed
 
-## En Route Decent
+### Enroute Decent
 
 Lookout to clear the decent
 
@@ -77,20 +117,20 @@ PAT - Power (control the adverse yaw), Attitude, Trim
 
 Level off from climbing - The same APT applies.
 
-[Ref](https://www.studyflight.com/descending/)
+[Reference](https://www.studyflight.com/descending/)
 
-## Normal Takeoff
+### Normal Takeoff
 
-Take-off Distance is the sum of the following three distances in one continuous maneuver:
+Take-off Distance is the lump sum of the following three:
 
 - Takeoff roll (ground roll)
 
 - Lift-off
-- Initial Climb until clear 50ftt obstacle
+- Initial Climb until clear 50ft obstacle
 
 *Confirm Wind Input before takeoff. Use Cross-wind Take-off Checklist if needed.*
 
-```
+```text
 Elevator neutral. Aileron neutral. No flaps.
 
 Full Power. Mix Rich. Carb Cold. Call "Power Set".
@@ -112,11 +152,11 @@ Climb out at 70. Trim.
 
 ### Normal Landing
 
-Important: Set mindset as "keep it flying without landing"
+Important: Set your mindset as "keep it flying without landing"
 
 On Down Wind:
 
-```
+```text
 Set Power to 2300rpm.
 
 Fly parallel to the landing Runway. Use a Crab angle when needed
@@ -135,12 +175,12 @@ At 45 degrees beyond threshold (turn early when having a
 tailwind), reduce power to 1500rpm, holding the
 altitude while making a turn to base.
 
-Call "___, <callsign>, turning base for Rwy __"
+Call "___, <callsign>, turning base for Rwy __" (optional)
 ```
 
 On Base Leg:
 
-```
+```text
 Holding the altitude while bleeding off A/S until it reaches
 75 knots
 
@@ -150,11 +190,7 @@ Anticipate a 500fpm decent.
 
 Look out for Wind
 
-  *** Not to overshoot when having a tail wind
-
-  *** Not to fly off track when having a wind from Rwy
-
-  *** Turn early when having a tail wind and/or wind from Rwy
+  *** When having tail winds, turn early and anticipate a bit high
 
 Turning Final and call "___, <callsign>, turning final
 on Rwy __. [Tough-n-Go / Full Stop]"
@@ -162,7 +198,7 @@ on Rwy __. [Tough-n-Go / Full Stop]"
 
 On Final:
 
-```
+```text
 Apply full flaps.
 
 A/S 65. Trim.
@@ -176,8 +212,7 @@ Pitch for Airspeed, Power for altitude
 Transition to Sideslip.
 
 When getting the vision of "exploding" runway:
-  Power to Idle, Hold control column, transition to cruise
-  attitude.
+  Power to Idle, Hold control column and gradually level off.
   Judge the sink rate using peripheral vision.
   When sinking, do baby steps of "pull-pause-pull" to
   keep the nose slight below horizon.
@@ -193,21 +228,20 @@ When touches down completely:
 
 On Down wind:
 
-```
+```text
 "Aiming to touch down at second dash"
 ```
 
 On Final:
 
-```
+```text
 Approach speed: 60
 
 "There is an 50ft obstacle before threshold"
 
-When obstacle is cleared, power to idle and push nose to
-maintain 60
+When obstacle is cleared, power to idle and maintain 60
 
-After touching down, HOLD control full back and RETRACT flaps
+After touching down, HOLD control full back, RETRACT flaps
 and APPLY maximum brake pressure
 
 (from C172 POH)
@@ -217,13 +251,13 @@ and APPLY maximum brake pressure
 
 On Down wind:
 
-```
+```text
 "Aiming to touch down at one third of the Rwy"
 ```
 
 On Final:
 
-```
+```text
 Perform a 60kt approach on final
 
 Power to Idle and enter cruising attitude as normal landing
@@ -247,7 +281,7 @@ brake pressure
 
 On straight and level flight
 
-```
+```text
 HASEL CHECK
 
 (Carb ON, Mix Rich)
@@ -268,7 +302,7 @@ and control yaw
 
 ### Power-on Stall Entry and Recovery
 
-```
+```text
 Entry:
 
 Power to 1700rpm
