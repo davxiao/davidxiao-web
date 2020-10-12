@@ -19,6 +19,7 @@ Before deploying to Firebase, we need to have a running website on local.
 - Update submodules and do some cleanup.
 
         cd davidxiao-web;
+        rm -rf public; # otherwise the following command will fail
         git submodule update --init --recursive;
 
 - Test it by run `hugo server -D;` on the project root directory, then visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser.
