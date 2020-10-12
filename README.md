@@ -28,7 +28,7 @@ As long as `hugo` is running, local test environment is up and running.
 
 ## Step 2: Deploying to Google Firebase
 
-1. Install Firebase CLI and (optional) Google Cloud SDK CLI on your local environment.
+1. Install Firebase CLI (required for site deployment) and Google Cloud SDK CLI (optional) on your local environment.
 
    - Firebase CLI. The recommended way is to run `npm i -g firebase-tools;` See its [github repo](https://github.com/firebase/firebase-tools) for detail
 
