@@ -22,9 +22,9 @@ Before deploying to Firebase, we need to have a running website on local.
         rm -rf public; # otherwise the following command will fail
         git submodule update --init --recursive;
 
-- Test it by run `hugo server -D;` on the project root directory, then visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser.
+- Test it by run `hugo server -D;` on the project root directory, then visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser. If you want to make the website accessible within your internal network, run `hugo server -D --bind=0.0.0.0;` instead.
 
-As long as the homepage is coming up, local test environment is up and running.
+As long as `hugo` is running, local test environment is up and running.
 
 ## Step 2: Deploying to Google Firebase
 
