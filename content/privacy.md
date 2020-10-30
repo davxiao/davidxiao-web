@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-date: "2020-05-26"
+date: "2020-10-13"
 draft: false
 share: false
 commentable: false
@@ -12,9 +12,9 @@ header:
   image: ""
 ---
 
-Last Updated: May 26, 2020
+Last Updated: Oct 13, 2020
 
-This Privacy Policy ("Policy") outlines the personal information handling practices on main site [davidxiao.me](https://davidxiao.me/) and mirror site [davxiao.github.io](https://davxiao.github.io/) ("this site", "I,", "me," and "my").
+This Privacy Policy ("Policy") outlines the personal information handling practices on the main site [davidxiao.me](https://davidxiao.me/) and the mirror site [davxiao.github.io](https://davxiao.github.io/) ("this site", "I,", "me," and "my").
 
 Before you post any comments on this site, please carefully review this [Privacy Policy](https://davidxiao.me/privacy/). By posting comments on this site, you understand that your information will be collected, used, and disclosed as outlined in this Privacy Policy.
 
@@ -62,6 +62,6 @@ If this privacy policy needs to be updated, the updated version will be posted t
 
 ## Questions
 
-If you have any questions about this Privacy Policy, you can contact me at: root@davidxiao.me
+If you have any questions about the Privacy Policy, you can reach out to me at root@davidxiao.me
 
 ---

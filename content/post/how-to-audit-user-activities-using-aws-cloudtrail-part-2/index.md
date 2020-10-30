@@ -3,8 +3,9 @@
 
 title: "Audit User Actions Using CloudTrail - Part 2"
 subtitle: "Cross-Account Access via AssumeRole"
-summary: ""
-authors: []
+summary: "This is the second post of a series that demonstrates how to leverage AWS CloudTrail in auditing user actions. This post is focused on cross account access."
+authors:
+  - david-xiao
 tags: []
 categories: []
 date: 2020-09-17T23:53:30-04:00

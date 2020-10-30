@@ -3,7 +3,7 @@
 
 title: "Extract User Identity from AWS Cloudtrail"
 subtitle: ""
-summary: ""
+summary: "Whether you are troubleshooting or investigating something on AWS, being able to look up user identity across the Cloudtrail event logs can be very helpful."
 profile: false
 authors:
   - david-xiao

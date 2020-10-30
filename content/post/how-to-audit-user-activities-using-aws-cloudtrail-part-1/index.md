@@ -1,10 +1,11 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "How to Audit User Activities Using Aws Cloudtrail Part 1"
-subtitle: ""
-summary: ""
-authors: []
+title: "Audit User Actions Using CloudTrail - Part 1"
+subtitle: "Same Account Access"
+summary: "AWS CloudTrail is an essential service that records user actions and systems events. This is the first post of a series that demonstrates how to leverage CloudTrail to identify the IAM principal and establish timelines. This post is focused on same account access."
+authors: 
+  - david-xiao
 tags: []
 categories: []
 date: 2020-09-17T23:53:23-04:00

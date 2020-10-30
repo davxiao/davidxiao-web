@@ -27,7 +27,7 @@ bio: My interests include cybersecurity and public cloud such as AWS.
 
 education:
   courses:
-  - course: Master's Degree in Cybersecurity
+  - course: Master's Degree in Information Sciences
     institution: Penn State University
     year: 2016
 

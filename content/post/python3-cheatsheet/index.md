@@ -2,8 +2,8 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Python3 CheatSheet"
-subtitle: "A tiny collection of useful python3 code snippets"
-summary: "As a recovering software engineer, I put together this cheatsheet as I learn Python3"
+subtitle: "My collection of python3 code snippets"
+summary: "This post is my collection of python3 code snippets including string and list manipulation."
 authors:
   - david-xiao
 tags:
@@ -34,7 +34,7 @@ projects: []
 
 TLDR;
 
-This post is my tiny collection of python3 code snippets. It comes in handy when manipulating string and list.
+This post is my collection of python3 code snippets. It comes in handy when manipulating string and list.
 
 ## single or double quoted string
 
@@ -236,6 +236,41 @@ res = s.replace(find_s, replace_s)
 # res = 'welcome what what the jungle'
 ```
 
+## detect duplicate items in a list
+
+method 1: loop
+
+```python
+def has_dup(lst):
+  flag = 0
+  for i in range (len(lst)):
+    for j in range (i+1,len(lst)):
+        if (lst[i] == lst[j]):
+          flag = 1
+  if (flag == 1):
+     return True
+  else:
+     return False
+  
+l=[1, 2, 3, 4, 5, 6]  
+print(has_dup(l))
+# False
+```
+
+method 2: create a temp set
+
+`set` is a series of hashable objects, in a way it's like `dict` but the main difference between the two is that a dict item contains both key and value while a set item contains only key.
+
+```python
+s = [1,2,3,1,5,1]
+res = set(s)
+if (len(s) == len(res)):
+  print('no duplicates found')
+else:
+  print('duplicates found')
+# duplicates found
+```
+
 ## remove duplicate words in a string
 
 ```python
@@ -262,10 +297,12 @@ res = ''.join([chr(ord(c)+offset) for c in s])
 
 ## Use regex to split complicated string into words
 
+Compared to string.split() method, regex approach preserves separators in the result so that it's possible to re-construct the original string from the result.
+
 ```python
 import re
 s = 'Words, words, words.   '
-res=re.split('([,. ]+)', s) # '(...)' enables the matched separators included in the result list. Remove '()' so that separators will not be included.
+res=re.split('([,. ]+)', s) # '(...)' enables the matched separators preserved in the result list.
 # res = ['Words', ', ', 'words', ', ', 'words', '.   ', '']
 ```
 
@@ -335,4 +372,121 @@ s = 'unsafe html string <body>&</body>'
 words = s.split()
 [wordlength(x) for x in words]
 # maxlen = 14
+```
+
+## get both index and value when looping a list
+
+for both string and list
+
+```python
+s = 'abcdef'
+
+for i, value in enumerate(s):
+  print ("index ", i, "value ", value)
+```
+
+## create a list of empty items
+
+```python
+res = [None]*4
+# res = [None, None, None, None]
+
+# Note this is different
+res = ['']*4
+# res = ['', '', '', '']
+```
+
+## determine if a list is sorted
+
+```python
+s = [1,2,3,4,5,6]
+if (s == sorted(s)):
+  print("sorted")
+else:
+  print("not sorted")
+```
+
+## looping a dict
+
+```python
+ages = {
+    "Peter": 10,
+    "Isabel": 11,
+    "Anna": 9,
+    "Thomas": 10,
+    "Bob": 10,
+    "Joseph": 11,
+    "Maria": 12,
+    "Gabriel": 10,
+}
+
+# loop to get all keys
+for x in ages:
+  print(x)
+
+# loop to get all value
+for x in ages:
+  print(ages[x])
+
+# loop to get both keys and values
+for name, age in ages.items():
+  print(name, age)
+```
+
+## nested dict
+
+```python
+students = {
+    "Peter": {"age": 10, "address": "Lisbon"},
+    "Isabel": {"age": 11, "address": "Sesimbra"},
+    "Anna": {"age": 9, "address": "Lisbon"},
+}
+
+for p_id, p_info in students.items():
+    print("\nPerson Name:", p_id)
+    for key in p_info:
+        print(key + ':', p_info[key])
+```
+
+## find the max value in a dict and return the key
+
+```python
+ages = {
+     "Peter": 10,
+     "Isabel": 11,
+     "Anna": 9,
+     "Thomas": 10,
+     "Bob": 10,
+     "Joseph": 11,
+     "Maria": 12,
+     "Gabriel": 10,
+  }
+
+value = list(ages.values())
+key = list(ages.keys())
+print (key[value.index(max(value))])
+# Maria
+```
+
+## use nested list to cache multiplication results
+
+```python
+matrix = []
+for i in range(10): #0-9
+  row = []
+  for j in range(10): #0-9
+    row.append(i*j)
+  matrix.append(row)
+
+
+def multiply(x,y):
+  try:
+    return matrix[x][y]
+  except:
+    return x*y
+
+print(multiply(6,9))
+# 54
+print(multiply(66,99))
+# 6534
 ```

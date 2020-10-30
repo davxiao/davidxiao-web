@@ -42,17 +42,17 @@ graph TD;
     A[Client establishes a TCP connection to the server] -->B[Client sends Hello and list of cipher suites including TLS version] -->C[Server sends Hello, selected suite and certificate] --> D[Client validates certificate]
     D --> E[Client and server starts key exchange process. <br/>RSA and Diffie-Hellman are two common KEP algogirhtms]
     E --> F{Key Exchange Protocol}
-    F -->|RSA| G[When both client and server have <br/>the client random, the server random, <br/>and the premaster secret, each side <br/>independently combine these three inputs<br/> to come up with the session keys. <br/>They should both arrive at the same value]
-    F -->|DH| H[Both client and server independently <br/>agree on the same secret value using DH algorithm<br/> usually accompanied by RSA signature]
-    G -->I[Regardless of which KEP was used, <br/>the rest of the session uses the agreed key, an ephemeral symmetric key, <br/>to encrypt the communication both ways going forward]
+    F -->|RSA| G[Both client and server independently <br/>agree on the same secret value with client random,<br/> server random and premaster secret]
+    F -->|DH| H[Both client and server independently <br/>agree on the same secret value over exchanging<br/>  a few DH parameters]
+    G -->I[Regardless of which KEP was used, <br/>the rest of the session uses the agreed symmetric key to encrypt <br/>the communication both ways going forward]
     H -->I
 ```
 
-Read more about DH [here](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#Cryptographic_explanation)
+Read more about DH on [my post]({{< ref "/post/diffie-hellman-key-exchange-in-a-nutshell" >}}) and [wikipedia](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#Cryptographic_explanation)
 
 ## Key Takeaways About the KEPs
 
-👉 DH achieves forward secrecy while RSA does not.
+👉 DH achieves [forward secrecy](https://en.wikipedia.org/wiki/Forward_secrecy) while RSA does not.
 
 👉 DH handshake takes longer than RSA.
 
