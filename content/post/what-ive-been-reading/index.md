@@ -13,7 +13,7 @@ tags:
 categories:
   - Reading
 date: 2020-06-17
-lastmod: 2020-06-17
+lastmod: 2020-10-30
 featured: false
 draft: false
 
@@ -34,4 +34,8 @@ image:
 projects: []
 ---
 
-A Conflict of Visions: Ideological Origins of Political Struggles by Thomas Sowell. 2007. [On Amazon](https://www.amazon.com/dp/B06XBV7WHL)
+A Conflict of Visions: Ideological Origins of Political Struggles. 2007. Thomas Sowell. [Amazon link](https://www.amazon.com/dp/B06XBV7WHL)
+
+*[Oct 30 2020 update]*
+
+Discrimination and Disparities. 2019. Thomas Sowell.
