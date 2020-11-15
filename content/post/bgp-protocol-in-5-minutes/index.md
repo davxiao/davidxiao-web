@@ -3,7 +3,7 @@
 
 title: "Explain Border Gateway Protocol in 5 Minutes"
 subtitle: "In plain English"
-summary: "This post attempts to explain the Border Gateway Protocol in plain English: what it is; how it works at a high level and security concerns around the protocol."
+summary: "This post attempts to explain the Border Gateway Protocol in plain English: what it is; how it works at a high level and some of the threats from a security perspective."
 profile: false
 authors: 
   - david-xiao
@@ -81,7 +81,7 @@ In June 1989, the first version of a new routing protocol, known as the Border G
 
 BGP operates on OSI Layer 4, in other words, it understands IP address. 
 
-BGP is designed to exchange routing and reachability information between AS on the Internet. But it can also be used on private networks. A dedicated line between on-prem data center and a public cloud service provider (in AWS, it's called DirectConnect) can take advantage of BGP routing as well.
+BGP is designed to exchange routing and reachability information between AS on the Internet. But it can also be used on private networks. A dedicated line between on-prem data center and a public cloud service provider (in AWS, it's called [DirectConnect](https://aws.amazon.com/directconnect/faqs/)) can take advantage of BGP routing as well.
 
 {{< figure src="bgp-routing.png" title="BGP Route Propagation between Neighboring Domains<br>*credits:* [Ziv Leyes](https://www.imperva.com/blog/author/ziv/)" >}}
 
@@ -128,5 +128,7 @@ The main threats identified in the article above:
 [BGP for Humans: Making sense of Border Gateway Protocol](https://imperva.com/blog/bgp-routing-explained/), Ziv Leyes
 
 [Internet Routing and Traffic Engineering](https://aws.amazon.com/blogs/architecture/internet-routing-and-traffic-engineering/), AWS Architecture Blog
+
+[A Practical Guide to Troubleshooting with Traceroute](RAS_traceroute_N45.pdf)
 
 [Border Gateway Protocol](https://en.wikipedia.org/wiki/Border_Gateway_Protocol), Wikipedia
