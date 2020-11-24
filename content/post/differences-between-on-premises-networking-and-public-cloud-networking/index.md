@@ -58,9 +58,9 @@ On-premises data centers use technologies of their choice. Some such as Cisco AC
 
 ## Network Latency
 
-On-premises networks can provide very low network latency. It's not hard to find port to port nano second switches on the market. For example, Cisco provides switches that have 39ns port-to-port latency.
+On-premises networks can provide very low network latency. It's not hard to find switches that provide nano second latency. For instance, Cisco has switches that have 39ns port-to-port latency.
 
-CSPs like AWS are[catching up](https://aws.amazon.com/blogs/compute/low-latency-computing-with-aws-local-zones-part-1/) on this front but is nowhere near as good at the moment.
+CSPs like AWS are [catching up](https://aws.amazon.com/blogs/compute/low-latency-computing-with-aws-local-zones-part-1/) but is nowhere near as good yet.
 
 ## Legacy Systems and BYOD
 

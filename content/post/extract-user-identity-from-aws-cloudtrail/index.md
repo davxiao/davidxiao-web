@@ -8,15 +8,11 @@ profile: false
 authors:
   - david-xiao
 tags:
-  - cybersecurity
   - aws
   - cloudtrail
   - iam
-  - user-identity
 categories:
-  - Information Security
-  - AWS
-  - IAM
+  - Cybersecurity
 date: 2020-09-15
 lastmod: 2020-09-15
 featured: false

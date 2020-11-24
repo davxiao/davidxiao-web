@@ -9,9 +9,8 @@ authors:
   - david-xiao
 tags:
   - zerotrust
-  - cybersecurity
 categories: 
-  - Information Security
+  - Cybersecurity
 date: 2020-10-29
 lastmod: 2020-10-29
 featured: false

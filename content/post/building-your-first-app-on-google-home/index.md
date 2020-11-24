@@ -1,9 +1,10 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Building Your First App on Google Home in 10 minutes"
+title: "Build Your First App on Google Home in 10 minutes"
 subtitle: "with Google Actions and Dialogflow"
-summary: "Build and deploy a voice-activated app on Google Home in 10 minutes. It responds to your commands and plays personalized music if you ask! Not a bad way to play on someone's birthday, eh? :-)"
+summary: "Build and deploy a voice-activated app on Google Home in 10 minutes. The app will respond to your voice command and even play a piece of pre-defined music for you! Not a bad way to celebrate someone's birthday eh? :-)"
+toc: true
 profile: false
 authors:
   - david-xiao
@@ -35,35 +36,35 @@ image:
 projects: []
 ---
 
-***[TL;DR](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)***
+TL;DR
 
-*This post will show you how to build and deploy a voice-activated app on Google Cloud in 10 minutes. It responds to your commands and plays personalized music if you ask! Not a bad way to play on someone's birthday, eh?*
+This post will show you how to build and deploy a voice-activated app on Google Cloud in 10 minutes. The app will respond to your voice command and even play a piece of pre-defined music for you! Not a bad way to celebrate someone's birthday eh? :-)
 
 ## Create a New Project on Google Actions Console
 
-The app is built on Google Cloud using Google Actions and Dialogflow. If you don't have a Google Actions account, click [here](https://console.actions.google.com/) to create a new one. It's free.
+The app is built on Google Cloud using Google Actions and Dialogflow. If you don't have a Google Actions account yet, click [here](https://console.actions.google.com/) to create a new one. It's free.
 
-When the account is created, go ahead and create a new project. Google Actions allows you to add Actions support to existing GCP projects, but we will create a new one to keep it simple.
+When the account is ready, go ahead and create a new project. Google Actions allows you to add Actions to any existing GCP projects, but we will create being creating a new project for simplicity.
 
 {{< figure src="newproject.png" title="Create a new project" >}}
 
 ## Specify a Catchy Name for Your App
 
-You need to specify a catchy name for the app so that every time when you say those "gateway words" to the Google Home device, it will activate the app for you.
+Determine an activation phrase for the app so that every time when you say it, your app will be activated on the Google Home device.
 
-Go to the project dashboard, click on "Quick setup" followed by "Decide how your action is invoked" and put the app name here. It may reject the name if it's too common or ambiguous, e.g. "Hello" is probably not a good choice here.
+Go to the project dashboard, click on "Quick setup" followed by "Decide how your action is invoked" and put the app name here. It may reject your phrase name if it's considered too common or ambiguous, e.g. "Hello" is not a good choice here.
 
-For example, my app is called "Hello Jukebox".
+Let's say the app is called "Hello Jukebox".
 
 {{< figure src="hellojukebox.png" title="Specify a catchy name for your app" >}}
 
 ## Add Actions to Your App
 
-There is no secret sauce. An app is only as smart as what it's taught. This app will respond to voice commands and act accordingly based on the intents developeed for it. "Intent" is a Google term referring to a combination of voice command and its response.
+An app is only as smart as what it's taught. There is no secret sauce in here. This app will respond to voice commands and act accordingly based on the "Intent". "Intent" is a Google term referring to a combination of voice command and its corresponding response.
 
-Within one app, developer can create as many intents as they want as long as no intent is stepping on one another's toes. For example, trying to create two separate intents both responding to the same command "what is my favoriate color" would be confusing to begin with.
+Within an app, developers can create as many intents as they want so long as no intent is stepping on one another's toes. For example, trying to create two separate intents both responding to the same command "what is my favoriate color" would be confusing to begin with.
 
-Within an intent, developer can decide on the kind of response it needs to give: it can be as simple as having Google Home say something or be more complicated with custom logic.
+Within an intent, developer can decide on the kind of response it needs to provide: it can be as simple as having Google Home say some words or be more complicated with custom logic.
 
 {{< figure src="addaction.png" title="Add a new Action to your app" >}}
 
@@ -99,13 +100,13 @@ The code example will first say something then play an audio clip. If you need t
 
 ### Testing Your New App on Simulator
 
-Click on "Google Assistant" on the right bar to open the Simulator on Google Actions. From there you can tinker with your app until you're satisfied with it :-)
+Click on "Google Assistant" on the right bar to open the Simulator on Google Actions. From there you can tinker with your app until you're satisfied with it.
 
 {{< figure src="test.png" title="Text Responses" >}}
 
 ### Deploying to your Google Home Device
 
-Making your app available on [Google Assistant Actions Portal](https://assistant.google.com/explore) sounds like a great idea, however the releasing process could take some time as Google needs to review and approve your app first before it can be released. Since my post promised you a 10-minute ride, let's rolling to get the freshly baked app onto your own Google Home device.
+Making your app available on [Google Assistant Actions Portal](https://assistant.google.com/explore) sounds like a great idea, however the releasing process could take some time as Google needs to review and approve your app first. My post promised you a 10-minute ride, so let's take a detour to get your freshly baked app deployed onto your own Google Home device as Alpha testing thus bypassing the approval steps.
 
 On Actions console, click on "Deploy", choose "Alpha", click on "Manage Alpha Testers", and add your own Google Home device account email here. You can then switch to your Google Home account and use the opt-in link received on the invitation email to accept the invite.
 
@@ -113,4 +114,4 @@ On Actions console, click on "Deploy", choose "Alpha", click on "Manage Alpha Te
 
 When it's ready, click on "Create a release", and wait it to complete. It can take a few minutes.
 
-Congrats! You've just developed and deployed your first Google Home app in 10 minutes! Try say to your Google Home: "Hey Google, Talk to your_app_name_here" and see what happens :)
+Congrats! You've just built and deployed your first Google Home app in 10 minutes! It's time to say out loud "Hey Google, Talk to your_app_name_here" and see what will happen next :)

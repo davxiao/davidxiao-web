@@ -8,11 +8,10 @@ profile: false
 authors:
   - david-xiao
 tags:
-  - cybersecurity
   - tls
+  - tcp
 categories:
-  - Information Security
-  - TLS
+  - Cybersecurity
 date: 2020-08-31
 lastmod: 2020-09-10
 diagram: true

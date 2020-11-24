@@ -7,12 +7,10 @@ summary: "Review the differences and similarities between the two protocols from
 authors:
   - david-xiao
 tags:
-  - cybersecurity
   - tls
   - ssh
 categories:
-  - Information Security
-  - TLS
+  - Cybersecurity
 date: 2020-09-01
 lastmod: 2020-09-01
 featured: false

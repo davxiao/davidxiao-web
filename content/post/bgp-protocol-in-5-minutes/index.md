@@ -9,9 +9,8 @@ authors:
   - david-xiao
 tags:
   - bgp
-  - cybersecurity
 categories: 
-  - Information Security
+  - Cybersecurity
 date: 2020-10-30
 lastmod: 2020-10-30
 featured: false
@@ -35,7 +34,7 @@ projects: []
 
 TL;DR
 
-This post attempts to explain the BGP network protocol in plain English and answer those questions: 
+This post attempts to explain the BGP network protocol in plain English and answer those questions:
 
 - what is it?
 
@@ -71,7 +70,7 @@ Over time, those changes altogether made the static routing no longer a sustaina
 
 Another new type of construct that emerged is what's called Autonomous System (AS) architecture.
 
-An AS can be an Internet Service Provider, a university or an entire corporate network, including multiple locations (IP addresses). Each AS is represented by a unique number called an ASN.
+An AS can be an Internet Service Provider, a university or an entire corporate network, including multiple locations (IP addresses). Each AS is represented by a unique number called an **ASN**.
 
 At first, AS became the new level that inter-network operates on and routes against. As the internet continues to grow, it calls for a new protocol that can dynamically exchange routes information and decides on the routes depends on many other factors.
 
@@ -79,9 +78,13 @@ At first, AS became the new level that inter-network operates on and routes agai
 
 In June 1989, the first version of a new routing protocol, known as the Border Gateway Protocol, was formalized.
 
-BGP operates on OSI Layer 4, in other words, it understands IP address. 
+BGP operates on OSI Layer 4, in other words, it understands IP address.
 
-BGP is designed to exchange routing and reachability information between AS on the Internet. But it can also be used on private networks. A dedicated line between on-prem data center and a public cloud service provider (in AWS, it's called [DirectConnect](https://aws.amazon.com/directconnect/faqs/)) can take advantage of BGP routing as well.
+BGP is primarily designed to exchange routing and reachability information between AS on the Internet but can be used on private networks as well.
+
+For example, a dedicated line between on-prem data center and a public cloud service provider (e.g. it's called [DirectConnect](https://aws.amazon.com/directconnect/faqs/) in AWS) can take advantage of BGP routing as well.
+
+There are a range of ASNs that is reserved for private ASN. See [here](https://www.arin.net/resources/guide/asn/).
 
 {{< figure src="bgp-routing.png" title="BGP Route Propagation between Neighboring Domains<br>*credits:* [Ziv Leyes](https://www.imperva.com/blog/author/ziv/)" >}}
 
@@ -97,10 +100,10 @@ By design, routers running BGP accept advertised routes from other BGP routers b
 
 ## BGP security considerations
 
-Unfortunately BGP is not security by design.
+Unfortunately BGP is not secure by design.
 
 > Due to the extent to which BGP is embedded in the core systems of the Internet, and the number of different networks operated by many different organizations which collectively make up the Internet, correcting this vulnerability is a technically and economically challenging problem.
-> 
+>
 > *- Wikipedia*
 
 Cisco has published an article regarding protecting BGP:[Protecting Border Gateway Protocol for the Enterprise](https://tools.cisco.com/security/center/resources/protecting_border_gateway_protocol)

@@ -282,7 +282,7 @@ div.highlight code {
   background: #333544 !important;
 }
 
-.dark div.article-style pre code{
+.dark div.article-style pre code {
   background: #333544;
   color: #dadada;
 }
@@ -319,12 +319,6 @@ summary {
   font-weight: 300;
 }
 
-.home-section.wg-slider.carousel.slide div.container {
-  position: relative;
-  top: 30%;
-  transform: translateY(-30%);
-}
-
 /* font color for slides title */
 .wg-hero.dark .hero-title {
   color: #dadada;
@@ -337,4 +331,22 @@ summary {
 
 .btn-light {
   background: #dadada;
+}
+
+p {
+  margin-bottom: 1rem !important;
+}
+
+/* for side bar table of contents */
+#TableOfContents li a,
+.toc-top li a {
+  padding: .125rem 1.5rem .125rem 0.125rem;
+}
+
+#TableOfContents li a.active {
+  font-weight: 400;
+}
+
+.article-container {
+  max-width: 840px;
 }

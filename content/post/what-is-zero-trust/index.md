@@ -4,14 +4,14 @@
 title: "What Is Zero Trust"
 subtitle: "why it's emerging in security"
 summary: "This is the first post of a series that attempts to discuss Zero Trust in security from a conceptual and implementation perspective."
+toc: true
 profile: false
 authors: 
   - david-xiao
 tags:
   - zerotrust
-  - cybersecurity
 categories: 
-  - Information Security
+  - Cybersecurity
 date: 2020-10-31
 lastmod: 2020-10-31
 featured: false

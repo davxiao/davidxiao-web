@@ -7,10 +7,9 @@ summary: "All you need to know about OTP from a security perspective."
 aauthors:
   - david-xiao
 tags:
-  - cybersecurity
   - otp
 categories:
-  - Information Security
+  - Cybersecurity
 date: 2020-09-10
 lastmod: 2020-09-10
 featured: false

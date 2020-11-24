@@ -9,9 +9,8 @@ authors:
   - david-xiao
 tags:
   - casb
-  - cybersecurity
 categories: 
-  - Information Security
+  - Cybersecurity
 date: 2020-11-01
 lastmod: 2020-11-01
 featured: false
