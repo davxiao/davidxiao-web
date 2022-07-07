@@ -10,44 +10,16 @@ authors:
 superuser: true
 
 # Role/position
-role: Sr. Cloud Engineer
-
-# Organizations/Affiliations
-organizations:
-- name: TMX
-  url: "https://www.tmx.com/"
+role: Dad/Husband/ex-Apple/who-also-has-hobbies
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests include cybersecurity and public cloud such as AWS.
-
-#interests:
-#- Artificial Intelligence
-#- Computational Linguistics
-#- Information Retrieval
+bio: My professional interests include cybersecurity and cloud. I also write posts about my hobbies and little projects outside of work. Views are my own.
 
 education:
   courses:
   - course: Master's Degree in Information Sciences
     institution: Penn State University
-    year: 2016
 
-# Social/Academic Networking
-# For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "#contact" for contact widget.
-social:
-- icon: linkedin-in
-  icon_pack: fab
-  link: https://www.linkedin.com/in/davxiao
-- icon: github
-  icon_pack: fab
-  link: https://github.com/davxiao
-- icon: facebook
-  icon_pack: fab
-  link: https://www.facebook.com/davxiao
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/davxiao
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -64,6 +36,8 @@ email: ""
 #- Visitors
 ---
 
-My interests include cybersecurity and public cloud such as AWS.
+My professional interests include cybersecurity and cloud.
 
-Outside of work, I enjoy outdoor activies and working on my Private Pilot License when I can have time.
+I also write posts about my hobbies and little projects outside of work.
+
+Views are my own.
