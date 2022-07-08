@@ -1,4 +1,4 @@
-[submodule "themes/academic"]
+[submodule "academic"]
 	path = themes/academic
 	url = git@github.com:wowchemy/wowchemy-hugo-themes.git
 	branch = main

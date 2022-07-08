@@ -20,7 +20,7 @@ copyright = "&copy;{year} David Xiao"
 ############################
 
 # Name of Academic theme folder in `themes/`.
-theme = "academic"
+theme = "academic/modules/wowchemy"
 
 # use Hugo's default highlight. see https://github.com/gcushen/hugo-academic/issues/341
 # pygmentsCodefences = true
