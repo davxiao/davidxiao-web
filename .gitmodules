@@ -1,7 +1,3 @@
-[submodule "academic"]
-	path = themes/academic
-	url = git@github.com:wowchemy/wowchemy-hugo-themes.git
-	branch = main
 [submodule "public"]
 	path = public
 	url = git@github.com:davxiao/davxiao.github.io.git
