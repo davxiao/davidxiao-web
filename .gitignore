@@ -13,4 +13,11 @@ $RECYCLE.BIN/
 package-lock.json
 .cache
 .firebase/
+.hugo_build.lock
+
+# Py3 venv
+py3venv/
+
+# ignore themes
+themes/
 
