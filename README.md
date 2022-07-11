@@ -8,20 +8,20 @@ Before deploying to Firebase, we need to have a running website on local.
 
 - Install hugo on your local environment.
 - Fetch this repo.
-
+```
         git clone git@github.com:davxiao/davidxiao-web.git;
-
+```
 - (optional) Set the correct github username and email for commits in the future.
-  
-        git config --global user.name "David Xiao";
-        git config --global user.email "3964699+davxiao@users.noreply.github.com";
-
+``` 
+        git config user.name "David Xiao";
+        git config user.email "3964699+davxiao@users.noreply.github.com";
+```
 - Update submodules and do some cleanup.
-
+```
         cd davidxiao-web;
         rm -rf public; # otherwise the following command will fail
-        git submodule update --init --recursive;
-
+        git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
+```
 - Test it by run `hugo server -D;` on the project root directory, then visit [http://127.0.0.1:1313/](http://127.0.0.1:1313/) on your web browser. If you want to make the website accessible within your internal network, run `hugo server -D --bind=0.0.0.0;` instead.
 
 As long as `hugo` is running, local test environment is up and running.
@@ -46,9 +46,14 @@ As long as `hugo` is running, local test environment is up and running.
 
 ~~## External Dependencies~~
 
-~~The following libs are required only when using terminalizer-player. Those versions are tested in May 2020.~~
+July 2022 Update: terminalizer-player seems to be no longer active. I use [asciinema](https://asciinema.org/) now.
+~~The following libs are required only when using terminalizer-player. Those versions were tested in May 2020.~~
 
 ~~    npm install --save xterm@3.14.5 jquery@3.5.1 terminalizer-player@0.4.1;~~
+
+## Updating the theme
+
+git submodule update --remote --merge
 
 ## TODO
 

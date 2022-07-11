@@ -16,8 +16,8 @@ package-lock.json
 .hugo_build.lock
 
 # Py3 venv
-py3venv/
+venv/
 
-# ignore themes
-themes/
+# ignore the academic theme
+themes/academic/
 

@@ -19,8 +19,8 @@ copyright = "&copy;{year} David Xiao"
 ## Advanced options below ##
 ############################
 
-# Name of Academic theme folder in `themes/`.
-theme = "academic"
+# Name of the theme folder in `themes/`.
+theme = "PaperMod"
 
 # use Hugo's default highlight. see https://github.com/gcushen/hugo-academic/issues/341
 # pygmentsCodefences = true
@@ -33,7 +33,7 @@ enableGitInfo = false
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
-hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
+hasCJKLanguage = true  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
 
