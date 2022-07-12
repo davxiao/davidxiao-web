@@ -97,7 +97,6 @@ Before registering you Remark42 app on google, facebook, twitter and github (the
 
 DDNS(Dynamic DNS) comes in handy whether you are hosting Remark42 container on cloud such as AWS EC2 or on your homelab, since it allows you to update DNS A records whenever your endpoint IP changes.
 
-{{% alert note %}}
 
 Selecting a DDNS provider is important for a few reasons.
 
@@ -109,13 +108,12 @@ Selecting a DDNS provider is important for a few reasons.
 
 - The security posture of the DDNS provider. If the service provider gets compromised, you DDNS domain name can be "hijacked".
 
-{{% /alert %}}
 
 My approach:
 
-- Set up your public endpoint leveraging a DNS provider such as Cloudflare that has large operating scale, supports DDNS management over API and offers CDN protection over your private endpoint. See [here]({{< ref "/post/dynamic-dns-on-cloudflare" >}}) for more.
+- Set up your public endpoint leveraging a DNS provider such as Cloudflare that has large operating scale, supports DDNS management over API and offers CDN protection over your private endpoint. See [here]({{< ref "/posts/dynamic-dns-on-cloudflare" >}}) for more.
 
-- On your private endpoint, Use a reverse proxy such as Nginx to rewrite URLs so that multiple apps can be "tunneled through" a single domain name when needed. See [here]({{< ref "/post/hosting-multiple-containers-with-nginx-rewrite-rules" >}}) for more.
+- On your private endpoint, Use a reverse proxy such as Nginx to rewrite URLs so that multiple apps can be "tunneled through" a single domain name when needed. See [here]({{< ref "/posts/hosting-multiple-containers-with-nginx-rewrite-rules" >}}) for more.
 
 - Use Nginx control policy to restrict access to only Cloudflare IPs and local trusted networks.
 

@@ -9,4 +9,3 @@ title = "Gallery"
 subtitle = ""
 +++
 
-{{< gallery >}}

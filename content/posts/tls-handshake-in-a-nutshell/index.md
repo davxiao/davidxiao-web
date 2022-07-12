@@ -47,7 +47,7 @@ graph TD;
     H -->I
 ```
 
-Read more about DH on [my post]({{< ref "/post/diffie-hellman-key-exchange-in-a-nutshell" >}}) and [wikipedia](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#Cryptographic_explanation)
+Read more about DH on [my post]({{< ref "/posts/diffie-hellman-key-exchange-in-a-nutshell" >}}) and [wikipedia](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#Cryptographic_explanation)
 
 ## Key Takeaways About the KEPs
 
@@ -61,7 +61,7 @@ Read more about DH on [my post]({{< ref "/post/diffie-hellman-key-exchange-in-a-
 
 - HTTPS means "HTTP over TLS".
 
-- Both SSH and TLS are purpose-built for secure communication over the Internet, but they are very different in many ways. Check out [my another post]({{< ref "/post/ssh-and-tls" >}}) where I explain the differences between the two.
+- Both SSH and TLS are purpose-built for secure communication over the Internet, but they are very different in many ways. Check out [my another post]({{< ref "/posts/ssh-and-tls" >}}) where I explain the differences between the two.
 
 ## Glossary
 

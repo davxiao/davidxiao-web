@@ -122,8 +122,6 @@ On my homelab, I mount the same Samba share folder on both the Ubuntu and the Pi
     $ sudo systemctl start mmdvmhost ;
     $ sudo systemctl start mmdvmhost.timer ;
 
-{{% alert note %}}
-
 If you experience `mount error(115): Operation now in progress` when mounting CIFS on Pi, it might be caused by the iptable rules set by Pi-Star.
 
 To troubleshooting the issue, run the following commands on Pi-Star and see if mount works.
@@ -139,4 +137,3 @@ No worries, the following changes do not persist between restarts.
     sudo iptables -nvL ;
 ```
 
-{{% /alert %}}

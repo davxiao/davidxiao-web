@@ -9,6 +9,7 @@ $RECYCLE.BIN/
 
 # macOS 
 .DS_Store
+.AppleDouble/
 
 package-lock.json
 .cache
