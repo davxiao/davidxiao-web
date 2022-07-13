@@ -1,12 +1,12 @@
 baseURL: "https://davidxiao.me/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-title: PaperMod
+title: David Xiao's Garage
 paginate: 5
 theme: PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
+buildDrafts: true
+buildFuture: true
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
@@ -26,19 +26,9 @@ languages:
           series: series
         menu:
             main:
-                - name: Archive
-                  url: archives
-                  weight: 5
-                - name: Search
-                  url: search/
-                  weight: 10
                 - name: Tags
                   url: tags/
                   weight: 10
-                - name: WiKi
-                  url: https://github.com/adityatelange/hugo-PaperMod/wiki/
-                - name: Discord
-                  url: https://discord.gg/ahpmTvhVmp
 
 outputs:
     home:
@@ -48,8 +38,8 @@ outputs:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "Theme PaperMod - https://davidxiao.me"
-    author: Theme PaperMod
+    description: "This is my personal websites. Opinions are my own."
+    author: "David Xiao"
     # author: ["Me", "You"] # multiple authors
 
     defaultTheme: auto
@@ -67,7 +57,7 @@ params:
     images: ["papermod-cover.png"]
 
     profileMode:
-        enabled: false
+        enabled: false #toggle this
         title: PaperMod
         imageUrl: "#"
         imageTitle: my image
@@ -80,13 +70,13 @@ params:
               url: tags
 
     homeInfoParams:
-        Title: "PaperMod"
+        Title: "TL;DR"
         Content: >
-            Welcome to demo of hugo's theme PaperMod.
-            - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
-            - Do give a 🌟 on Github !
-            - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+            - Welcome to my personal website. Opinions are my own. <p>
+            My professional interests include cybersecurity and cloud. I also write about my hobbies and projects outside of work. This website is hosted on [Firebase](https://firebase.google.com/)
     socialIcons:
+        - name: linkedin
+          url: "https://www.linkedin.com/in/davxiao/"
         - name: github
           url: "https://github.com/davxiao/davidxiao-web"
         - name: Rss
@@ -163,4 +153,3 @@ services:
         disableInlineCSS: true
     twitter:
         disableInlineCSS: true
-
