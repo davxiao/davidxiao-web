@@ -1,7 +1,5 @@
 ---
-# Documentation: https://sourcethemes.com/academic/docs/managing-content/
-
-title: "A not so complete guide to building a home server"
+title: "A not so complete guide on building a home server"
 subtitle: "using ubuntu 20.04"
 summary: "This is a curated, opinionated guide to building a full-stack home server from hardware to application. The goal is to provide a linux environment that can manage VMs, containers and microvms with ease. As a platform, it allows the enthusiasts to experiment and try out new stuff such as PCI passthrough, AWS Site-to-Site VPN and more."
 toc: true
