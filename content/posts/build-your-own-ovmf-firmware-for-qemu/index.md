@@ -1,7 +1,7 @@
 ---
 title: "Build Your Own OVMF Firmware for Qemu VM"
 date: 2022-07-24T12:49:46-07:00
-draft: true
+draft: false
 ---
 
 # Overall Reference 
