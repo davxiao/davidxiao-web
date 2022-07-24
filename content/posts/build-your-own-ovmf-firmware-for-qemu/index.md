@@ -54,7 +54,7 @@ Replace it with 'X64' for 64bit
 
 # Build the Ovmf Firmware
 
-Run `build`. When it's complete, the output is located in the `Build/OvmfX64/RELEASE_GCC5/FV/` folder.
+Simply run `build` The firmware files are located in the `Build/OvmfX64/RELEASE_GCC5/FV/` folder.
 
 
 ## Build the firmware with Secure Boot support
