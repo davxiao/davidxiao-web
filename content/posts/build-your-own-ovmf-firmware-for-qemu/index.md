@@ -8,7 +8,7 @@ draft: false
 https://wiki.ubuntu.com/UEFI/EDK2
 
 # My Environment
-OS: Ubuntu 20.04
+Hypervisor OS: Ubuntu 20.04 LTS
 
 Kernel: 5.4
 
@@ -24,12 +24,12 @@ https://github.com/tianocore/edk2/blob/master/BaseTools/Bin/nasm_ext_dep.yaml
 
 
 # Prepare the Build Environment
-```
+```shell
 sudo apt install build-essential git uuid-dev iasl nasm ;
 # check nasm version and do necessary steps in the Caution section above
 git clone --depth 1 "https://github.com/tianocore/edk2.git" -b "edk2-stable202205" ;
 cd edk2 ;
-git submodule update --init --recursive ;
+git submodule update --init --recursive ; # Important! This retrieves all the submodules needed
 make -C BaseTools ;
 . edksetup.sh #make sure to include the dot
 ```
@@ -54,21 +54,17 @@ Replace it with 'X64' for 64bit
 
 # Build the Ovmf Firmware
 
-Run:
-```
-build
-```
-When it's complete, the output is located in the `Build/OvmfX64/RELEASE_GCC5/FV/` folder.
+Run `build`. When it's complete, the output is located in the `Build/OvmfX64/RELEASE_GCC5/FV/` folder.
 
 
 ## Build the firmware with Secure Boot support
-If you wish to build OVMF with Secure Boot, you must follow the openssl installation instructions found in CryptoPkg/Library/OpensslLib/Patch-HOWTO.txt, and build with the SECURE_BOOT_ENABLE option:
+If you wish to build OVMF with Secure Boot - this could be helpful especially if you plan to install Windows as your guest OS, you need to follow the openssl installation instructions found in [OpenSSL-HOWTO.txt](https://github.com/tianocore/edk2/blob/master/CryptoPkg/Library/OpensslLib/OpenSSL-HOWTO.txt), and build with the SECURE_BOOT_ENABLE option:
 `$ build -DSECURE_BOOT_ENABLE=TRUE`
 
 # Post Build
 
 Manually copy the output files:
-```
+```shell
 sudo cp Build/OvmfX64/RELEASE_GCC5/FV/OVMF_CODE.fd  /usr/share/OVMF/OVMF_CODE.secboot.202207.fd ;
 sudo cp Build/OvmfX64/RELEASE_GCC5/FV/OVMF_VARS.fd  /usr/share/OVMF/OVMF_VARS.secboot.202207.fd ;
 ```
