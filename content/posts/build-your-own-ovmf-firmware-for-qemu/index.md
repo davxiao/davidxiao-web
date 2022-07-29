@@ -24,7 +24,7 @@ https://github.com/tianocore/edk2/blob/master/BaseTools/Bin/nasm_ext_dep.yaml
 
 
 # Prepare the Build Environment
-```shell
+```bash
 sudo apt install build-essential git uuid-dev iasl nasm ;
 # check nasm version and do necessary steps in the Caution section above
 git clone --depth 1 "https://github.com/tianocore/edk2.git" -b "edk2-stable202205" ;
@@ -64,7 +64,7 @@ If you wish to build OVMF with Secure Boot - this could be helpful especially if
 # Post Build
 
 Manually copy the output files:
-```shell
+```bash
 sudo cp Build/OvmfX64/RELEASE_GCC5/FV/OVMF_CODE.fd  /usr/share/OVMF/OVMF_CODE.secboot.202207.fd ;
 sudo cp Build/OvmfX64/RELEASE_GCC5/FV/OVMF_VARS.fd  /usr/share/OVMF/OVMF_VARS.secboot.202207.fd ;
 ```
