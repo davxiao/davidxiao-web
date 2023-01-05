@@ -18,6 +18,6 @@ package-lock.json
 # Py3 venv
 venv/
 
-# ignore the academic theme
+# ignore the themes
 themes/
 
