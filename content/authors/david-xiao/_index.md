@@ -36,7 +36,7 @@ email: ""
 #- Visitors
 ---
 
-My professional interests include cybersecurity and cloud.
+My professional interests include cybersecurity and public cloud.
 
 I also write posts about my hobbies and little projects outside of work.
 
