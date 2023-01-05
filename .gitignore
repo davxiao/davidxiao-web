@@ -3,7 +3,6 @@ resources/
 
 # Windows
 Thumbs.db
-ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
@@ -20,5 +19,5 @@ package-lock.json
 venv/
 
 # ignore the academic theme
-themes/academic/
+themes/
 
